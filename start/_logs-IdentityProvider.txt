@@ -1,0 +1,945 @@
+2022-11-23 12:25:57.008 +01:00 [INF] User profile is available. Using 'C:\Users\jeanbaptiste.castill\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-23 12:25:57.377 +01:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2022-11-23 12:25:57.378 +01:00 [INF] Quartz Scheduler created
+2022-11-23 12:25:57.379 +01:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2022-11-23 12:25:57.380 +01:00 [INF] RAMJobStore initialized.
+2022-11-23 12:25:57.381 +01:00 [INF] Quartz Scheduler 3.5.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2022-11-23 12:25:57.382 +01:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2022-11-23 12:25:57.394 +01:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2022-11-23 12:25:57.441 +01:00 [INF] Adding 1 jobs, 1 triggers.
+2022-11-23 12:25:57.448 +01:00 [INF] Adding job: OpenIddict.Quartz.OpenIddictQuartzJob
+2022-11-23 12:25:59.495 +01:00 [INF] Entity Framework Core 6.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.10' with options: None
+2022-11-23 12:25:59.710 +01:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2022-11-23 12:26:00.570 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[@__identifier_0='?' (Size = 22)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."ClientId" = @__identifier_0
+LIMIT 1
+2022-11-23 12:26:00.740 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__identifier_0='?' (Size = 2)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."ClientId" = @__identifier_0
+LIMIT 1
+2022-11-23 12:26:00.743 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__identifier_0='?' (Size = 22)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."ClientId" = @__identifier_0
+LIMIT 1
+2022-11-23 12:26:00.803 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__name_0='?' (Size = 16)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ConcurrencyToken", "o"."Description", "o"."Descriptions", "o"."DisplayName", "o"."DisplayNames", "o"."Name", "o"."Properties", "o"."Resources"
+FROM "OpenIddictScopes" AS "o"
+WHERE "o"."Name" = @__name_0
+LIMIT 1
+2022-11-23 12:26:01.845 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-23 12:26:01.845 +01:00 [INF] Hosting environment: Development
+2022-11-23 12:26:01.845 +01:00 [INF] Content root path: C:\Repos\exercises-security-workshop\3-OpenIDConnect-OAuth2-flows\start\IdentityProvider
+2022-11-23 12:26:01.888 +01:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2022-11-23 12:26:01.912 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44318/.well-known/openid-configuration - -
+2022-11-23 12:26:01.912 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - -
+2022-11-23 12:26:02.097 +01:00 [INF] The request address matched a server endpoint: "Configuration".
+2022-11-23 12:26:02.152 +01:00 [INF] The configuration request was successfully extracted: {}.
+2022-11-23 12:26:02.156 +01:00 [INF] The configuration request was successfully validated.
+2022-11-23 12:26:02.196 +01:00 [INF] Executing endpoint 'OpeniddictServer.Controllers.HomeController.Index (IdentityProvider)'
+2022-11-23 12:26:02.211 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller OpeniddictServer.Controllers.HomeController (IdentityProvider).
+2022-11-23 12:26:02.213 +01:00 [INF] The response was successfully returned as a JSON document: {
+  "issuer": "https://localhost:44318/",
+  "authorization_endpoint": "https://localhost:44318/connect/authorize",
+  "token_endpoint": "https://localhost:44318/connect/token",
+  "introspection_endpoint": "https://localhost:44318/connect/introspect",
+  "end_session_endpoint": "https://localhost:44318/connect/logout",
+  "userinfo_endpoint": "https://localhost:44318/connect/userinfo",
+  "jwks_uri": "https://localhost:44318/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "implicit",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code",
+    "code id_token",
+    "code id_token token",
+    "code token"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "dataEventRecords"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_basic",
+    "client_secret_post"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_basic",
+    "client_secret_post"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false
+}.
+2022-11-23 12:26:02.254 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44318/.well-known/openid-configuration - - - 200 1535 application/json;charset=UTF-8 347.1896ms
+2022-11-23 12:26:02.701 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44318/.well-known/jwks - -
+2022-11-23 12:26:02.712 +01:00 [INF] The request address matched a server endpoint: "Cryptography".
+2022-11-23 12:26:02.719 +01:00 [INF] The cryptography request was successfully extracted: {}.
+2022-11-23 12:26:02.722 +01:00 [INF] The cryptography request was successfully validated.
+2022-11-23 12:26:02.764 +01:00 [INF] The response was successfully returned as a JSON document: {
+  "keys": [
+    {
+      "kid": "E3A47C5BCE3FEF502E6D6DCACA2F5B4B330B66DA",
+      "use": "sig",
+      "kty": "RSA",
+      "alg": "RS256",
+      "e": "AQAB",
+      "n": "4x6yeqfoJIRXKRtLYhBzoiEE__Eu0HUhZcHuFxkToXiIU7EMJgvxT2-QLX4Da328Zuu_dstzVoN6Kh-tPtmvP7YGHMDngrRF7Q5ekKKmPNUZ0o-8gfX5yfVRpGuLiQR_Bhv4GYDdQSmgNP8QTYUZqdKNElxUkHjalm7DXW39D1UlzR2bsYznjgssNv8ePYdUwtsAlHmJtxWvwqBIwtD5bpAPTLPKPv-5hNUYPqii-ze8HY6pQ4lHx8Xgx0939OQzYLUZYNVRp4gZHGRGpgLWzFTRcnPngZoQre8AjCzi0Q_Z_8QutpWN_9lcqppNpbQsWhM1P7wytaLEYHuK5ThcAQ",
+      "x5t": "46R8W84_71AubW3Kyi9bSzMLZto",
+      "x5c": [
+        "MIIC9DCCAdygAwIBAgIIA3nD8lKWXAQwDQYJKoZIhvcNAQELBQAwMDEuMCwGA1UEAxMlT3BlbklkZGljdCBTZXJ2ZXIgU2lnbmluZyBDZXJ0aWZpY2F0ZTAeFw0yMjExMjMxMTI1NTZaFw0yNDExMjMxMTI1NTZaMDAxLjAsBgNVBAMTJU9wZW5JZGRpY3QgU2VydmVyIFNpZ25pbmcgQ2VydGlmaWNhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDjHrJ6p+gkhFcpG0tiEHOiIQT/8S7QdSFlwe4XGROheIhTsQwmC/FPb5AtfgNrfbxm6792y3NWg3oqH60+2a8/tgYcwOeCtEXtDl6QoqY81RnSj7yB9fnJ9VGka4uJBH8GG/gZgN1BKaA0/xBNhRmp0o0SXFSQeNqWbsNdbf0PVSXNHZuxjOeOCyw2/x49h1TC2wCUeYm3Fa/CoEjC0PlukA9Ms8o+/7mE1Rg+qKL7N7wdjqlDiUfHxeDHT3f05DNgtRlg1VGniBkcZEamAtbMVNFyc+eBmhCt7wCMLOLRD9n/xC62lY3/2Vyqmk2ltCxaEzU/vDK1osRge4rlOFwBAgMBAAGjEjAQMA4GA1UdDwEB/wQEAwIHgDANBgkqhkiG9w0BAQsFAAOCAQEAAeOggrLKmmfOhfXxFywMohp84kOs1UNgD6dCRBMSX/BzXGAtrEqxuan6xfdDDcPzZlA2URRDvjPXQoDwez5GQB5gb20JguvhurrXq39Y2MGSmN5BWL+UmevicjAZugWtssvTC3yotI3N7yBvY9z5hFKQZb/Bpw67vM0zo61B2ntH/AC6JI0MP7fmcSZbj5oNTf84PNzwbR8B0ejGP9pqLg+kzxrOZwq64HEnJQWhJ/EDwdQ8B8e59spmsVU4nuB3zH4T3XAz7W0c/GEUn+rmEws9Sso+kXxXhRwQltma2INFr48/7a7nY6t3WuBdE5bin78RGgrC5GuQCQ8ol+L08w=="
+      ]
+    }
+  ]
+}.
+2022-11-23 12:26:02.767 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44318/.well-known/jwks - - - 200 1635 application/json;charset=UTF-8 65.4728ms
+2022-11-23 12:26:02.867 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/connect/authorize?client_id=oidc-pkce-confidential&redirect_uri=https%3A%2F%2Flocalhost%3A44360%2Fsignin-oidc&response_type=code&scope=openid%20profile&code_challenge=lVA4hnvQFMepWs4Wrw30zkI1r1jVP-SzORHkTHJe4cU&code_challenge_method=S256&response_mode=form_post&nonce=638047995628068446.YTM0MGI3YzEtZGY1My00Mjg4LTgwNjQtZjg0OWViMjkzN2QxMzQ3NTJmYTUtNGU2OC00MjA0LTk2ODEtZTQzYjA2OTc2Y2Iw&state=CfDJ8FCl9LdozMBJiV4cQJICZ8Eq0dnuS2XPa6C7EJHEj9og4eHZKBI8Q1gfIgcZxvschoAmkUcsfWgwO3cXIRhhjjPJBe4AIe20VYfg1jsWx8t-7Ou5mdOQcr1IOQi--stUxj_HNEvX9TwrzHEWNp7KiiNifF1x7f1IvP7oasQmvNyuzlermiGCgXmrXcDxJRsLKNbWo2D-WSuOx668Ik5dnqx9SeBqx8LaGZfSCBN52rSKiyRdcH22mNHZiOqgsFi9Eudo6PlJ1e5UtaUaWNdPbnxvrQdRQw2jubWcx9gXbXauYObTE92-Va9sm3QZ37JlAW4O18wcK_WgT-y4cqjVfM6cSJ8oK2srx_fsfr7wjWPV0NS8qx7FRN8QqVilQQMMWw&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.10.0.0 - -
+2022-11-23 12:26:02.871 +01:00 [INF] The request address matched a server endpoint: "Authorization".
+2022-11-23 12:26:02.897 +01:00 [INF] The authorization request was successfully extracted: {
+  "client_id": "oidc-pkce-confidential",
+  "redirect_uri": "https://localhost:44360/signin-oidc",
+  "response_type": "code",
+  "scope": "openid profile",
+  "code_challenge": "lVA4hnvQFMepWs4Wrw30zkI1r1jVP-SzORHkTHJe4cU",
+  "code_challenge_method": "S256",
+  "response_mode": "form_post",
+  "nonce": "638047995628068446.YTM0MGI3YzEtZGY1My00Mjg4LTgwNjQtZjg0OWViMjkzN2QxMzQ3NTJmYTUtNGU2OC00MjA0LTk2ODEtZTQzYjA2OTc2Y2Iw",
+  "state": "CfDJ8FCl9LdozMBJiV4cQJICZ8Eq0dnuS2XPa6C7EJHEj9og4eHZKBI8Q1gfIgcZxvschoAmkUcsfWgwO3cXIRhhjjPJBe4AIe20VYfg1jsWx8t-7Ou5mdOQcr1IOQi--stUxj_HNEvX9TwrzHEWNp7KiiNifF1x7f1IvP7oasQmvNyuzlermiGCgXmrXcDxJRsLKNbWo2D-WSuOx668Ik5dnqx9SeBqx8LaGZfSCBN52rSKiyRdcH22mNHZiOqgsFi9Eudo6PlJ1e5UtaUaWNdPbnxvrQdRQw2jubWcx9gXbXauYObTE92-Va9sm3QZ37JlAW4O18wcK_WgT-y4cqjVfM6cSJ8oK2srx_fsfr7wjWPV0NS8qx7FRN8QqVilQQMMWw",
+  "x-client-SKU": "ID_NETSTANDARD2_0",
+  "x-client-ver": "6.10.0.0"
+}.
+2022-11-23 12:26:02.973 +01:00 [INF] Entity Framework Core 6.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.10' with options: None
+2022-11-23 12:26:02.974 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__identifier_0='?' (Size = 22)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."ClientId" = @__identifier_0
+LIMIT 1
+2022-11-23 12:26:03.083 +01:00 [INF] The authorization request was successfully validated.
+2022-11-23 12:26:03.091 +01:00 [INF] Executing endpoint 'OpeniddictServer.Controllers.AuthorizationController.Authorize (IdentityProvider)'
+2022-11-23 12:26:03.109 +01:00 [INF] Route matched with {action = "Authorize", controller = "Authorization", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authorize() on controller OpeniddictServer.Controllers.AuthorizationController (IdentityProvider).
+2022-11-23 12:26:03.142 +01:00 [INF] Executing ChallengeResult with authentication schemes (["Identity.Application"]).
+2022-11-23 12:26:03.156 +01:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2022-11-23 12:26:03.165 +01:00 [INF] Executed action OpeniddictServer.Controllers.AuthorizationController.Authorize (IdentityProvider) in 48.9238ms
+2022-11-23 12:26:03.167 +01:00 [INF] Executed endpoint 'OpeniddictServer.Controllers.AuthorizationController.Authorize (IdentityProvider)'
+2022-11-23 12:26:03.187 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Identity/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%3Fclient_id%3Doidc-pkce-confidential%26redirect_uri%3Dhttps%253A%252F%252Flocalhost%253A44360%252Fsignin-oidc%26response_type%3Dcode%26scope%3Dopenid%2520profile%26code_challenge%3DlVA4hnvQFMepWs4Wrw30zkI1r1jVP-SzORHkTHJe4cU%26code_challenge_method%3DS256%26response_mode%3Dform_post%26nonce%3D638047995628068446.YTM0MGI3YzEtZGY1My00Mjg4LTgwNjQtZjg0OWViMjkzN2QxMzQ3NTJmYTUtNGU2OC00MjA0LTk2ODEtZTQzYjA2OTc2Y2Iw%26state%3DCfDJ8FCl9LdozMBJiV4cQJICZ8Eq0dnuS2XPa6C7EJHEj9og4eHZKBI8Q1gfIgcZxvschoAmkUcsfWgwO3cXIRhhjjPJBe4AIe20VYfg1jsWx8t-7Ou5mdOQcr1IOQi--stUxj_HNEvX9TwrzHEWNp7KiiNifF1x7f1IvP7oasQmvNyuzlermiGCgXmrXcDxJRsLKNbWo2D-WSuOx668Ik5dnqx9SeBqx8LaGZfSCBN52rSKiyRdcH22mNHZiOqgsFi9Eudo6PlJ1e5UtaUaWNdPbnxvrQdRQw2jubWcx9gXbXauYObTE92-Va9sm3QZ37JlAW4O18wcK_WgT-y4cqjVfM6cSJ8oK2srx_fsfr7wjWPV0NS8qx7FRN8QqVilQQMMWw%26x-client-SKU%3DID_NETSTANDARD2_0%26x-client-ver%3D6.10.0.0 - -
+2022-11-23 12:26:03.191 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/connect/authorize?client_id=oidc-pkce-confidential&redirect_uri=https%3A%2F%2Flocalhost%3A44360%2Fsignin-oidc&response_type=code&scope=openid%20profile&code_challenge=lVA4hnvQFMepWs4Wrw30zkI1r1jVP-SzORHkTHJe4cU&code_challenge_method=S256&response_mode=form_post&nonce=638047995628068446.YTM0MGI3YzEtZGY1My00Mjg4LTgwNjQtZjg0OWViMjkzN2QxMzQ3NTJmYTUtNGU2OC00MjA0LTk2ODEtZTQzYjA2OTc2Y2Iw&state=CfDJ8FCl9LdozMBJiV4cQJICZ8Eq0dnuS2XPa6C7EJHEj9og4eHZKBI8Q1gfIgcZxvschoAmkUcsfWgwO3cXIRhhjjPJBe4AIe20VYfg1jsWx8t-7Ou5mdOQcr1IOQi--stUxj_HNEvX9TwrzHEWNp7KiiNifF1x7f1IvP7oasQmvNyuzlermiGCgXmrXcDxJRsLKNbWo2D-WSuOx668Ik5dnqx9SeBqx8LaGZfSCBN52rSKiyRdcH22mNHZiOqgsFi9Eudo6PlJ1e5UtaUaWNdPbnxvrQdRQw2jubWcx9gXbXauYObTE92-Va9sm3QZ37JlAW4O18wcK_WgT-y4cqjVfM6cSJ8oK2srx_fsfr7wjWPV0NS8qx7FRN8QqVilQQMMWw&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.10.0.0 - - - 302 - - 323.4221ms
+2022-11-23 12:26:08.553 +01:00 [INF] Executing endpoint '/Account/Login'
+2022-11-23 12:26:08.674 +01:00 [INF] Executing ViewResult, running view Index.
+2022-11-23 12:26:08.846 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2022-11-23 12:26:08.886 +01:00 [INF] Executing handler method OpeniddictServer.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2022-11-23 12:26:08.898 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2022-11-23 12:26:08.902 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2022-11-23 12:26:08.911 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2022-11-23 12:26:08.912 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2022-11-23 12:26:09.700 +01:00 [INF] Executed ViewResult - view Index executed in 7476.8549ms.
+2022-11-23 12:26:09.709 +01:00 [INF] Executed action OpeniddictServer.Controllers.HomeController.Index (IdentityProvider) in 7497.1273ms
+2022-11-23 12:26:09.711 +01:00 [INF] Executed endpoint 'OpeniddictServer.Controllers.HomeController.Index (IdentityProvider)'
+2022-11-23 12:26:09.788 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - - - 200 - text/html;+charset=utf-8 7882.0339ms
+2022-11-23 12:26:09.858 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/lib/bootstrap/dist/css/bootstrap.min.css - -
+2022-11-23 12:26:09.860 +01:00 [INF] Executed page /Account/Login in 1013.9404ms
+2022-11-23 12:26:09.860 +01:00 [INF] Executed endpoint '/Account/Login'
+2022-11-23 12:26:09.868 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Identity/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%3Fclient_id%3Doidc-pkce-confidential%26redirect_uri%3Dhttps%253A%252F%252Flocalhost%253A44360%252Fsignin-oidc%26response_type%3Dcode%26scope%3Dopenid%2520profile%26code_challenge%3DlVA4hnvQFMepWs4Wrw30zkI1r1jVP-SzORHkTHJe4cU%26code_challenge_method%3DS256%26response_mode%3Dform_post%26nonce%3D638047995628068446.YTM0MGI3YzEtZGY1My00Mjg4LTgwNjQtZjg0OWViMjkzN2QxMzQ3NTJmYTUtNGU2OC00MjA0LTk2ODEtZTQzYjA2OTc2Y2Iw%26state%3DCfDJ8FCl9LdozMBJiV4cQJICZ8Eq0dnuS2XPa6C7EJHEj9og4eHZKBI8Q1gfIgcZxvschoAmkUcsfWgwO3cXIRhhjjPJBe4AIe20VYfg1jsWx8t-7Ou5mdOQcr1IOQi--stUxj_HNEvX9TwrzHEWNp7KiiNifF1x7f1IvP7oasQmvNyuzlermiGCgXmrXcDxJRsLKNbWo2D-WSuOx668Ik5dnqx9SeBqx8LaGZfSCBN52rSKiyRdcH22mNHZiOqgsFi9Eudo6PlJ1e5UtaUaWNdPbnxvrQdRQw2jubWcx9gXbXauYObTE92-Va9sm3QZ37JlAW4O18wcK_WgT-y4cqjVfM6cSJ8oK2srx_fsfr7wjWPV0NS8qx7FRN8QqVilQQMMWw%26x-client-SKU%3DID_NETSTANDARD2_0%26x-client-ver%3D6.10.0.0 - - - 200 - text/html;+charset=utf-8 6680.4408ms
+2022-11-23 12:26:10.096 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Repos\exercises-security-workshop\3-OpenIDConnect-OAuth2-flows\start\IdentityProvider\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2022-11-23 12:26:10.126 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/css/site.css - -
+2022-11-23 12:26:10.130 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 273.1570ms
+2022-11-23 12:26:10.131 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/lib/jquery/dist/jquery.min.js - -
+2022-11-23 12:26:10.142 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2022-11-23 12:26:10.143 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - -
+2022-11-23 12:26:10.154 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Repos\exercises-security-workshop\3-OpenIDConnect-OAuth2-flows\start\IdentityProvider\wwwroot\js\site.js'
+2022-11-23 12:26:10.154 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0 - - - 200 230 application/javascript 11.0438ms
+2022-11-23 12:26:10.214 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Identity/lib/jquery-validation/dist/jquery.validate.js - -
+2022-11-23 12:26:10.215 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js - -
+2022-11-23 12:26:10.217 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2022-11-23 12:26:10.222 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Repos\exercises-security-workshop\3-OpenIDConnect-OAuth2-flows\start\IdentityProvider\wwwroot\lib\jquery\dist\jquery.min.js'
+2022-11-23 12:26:10.224 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Repos\exercises-security-workshop\3-OpenIDConnect-OAuth2-flows\start\IdentityProvider\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2022-11-23 12:26:10.242 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Repos\exercises-security-workshop\3-OpenIDConnect-OAuth2-flows\start\IdentityProvider\wwwroot\css\site.css'
+2022-11-23 12:26:10.242 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/css/site.css - - - 200 1417 text/css 116.3287ms
+2022-11-23 12:26:10.243 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/lib/jquery/dist/jquery.min.js - - - 200 89478 application/javascript 109.8548ms
+2022-11-23 12:26:10.244 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 101.5266ms
+2022-11-23 12:26:10.287 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 11950 application/javascript;+charset=utf-8 69.0866ms
+2022-11-23 12:26:10.292 +01:00 [INF] Sending file. Request path: '/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js'. Physical path: 'C:\Users\jeanbaptiste.castill\.nuget\packages\microsoft.aspnetcore.identity.ui\6.0.10\staticwebassets\V5\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js'
+2022-11-23 12:26:10.292 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js - - - 200 19366 application/javascript 78.1073ms
+2022-11-23 12:26:10.297 +01:00 [INF] Sending file. Request path: '/Identity/lib/jquery-validation/dist/jquery.validate.js'. Physical path: 'C:\Users\jeanbaptiste.castill\.nuget\packages\microsoft.aspnetcore.identity.ui\6.0.10\staticwebassets\V5\lib\jquery-validation\dist\jquery.validate.js'
+2022-11-23 12:26:10.299 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Identity/lib/jquery-validation/dist/jquery.validate.js - - - 200 48676 application/javascript 85.5174ms
+2022-11-23 12:26:10.489 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2022-11-23 12:26:10.490 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 11950 application/javascript;+charset=utf-8 1.3901ms
+2022-11-23 12:26:11.089 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/favicon.ico - -
+2022-11-23 12:26:11.092 +01:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Repos\exercises-security-workshop\3-OpenIDConnect-OAuth2-flows\start\IdentityProvider\wwwroot\favicon.ico'
+2022-11-23 12:26:11.092 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/favicon.ico - - - 200 5430 image/x-icon 3.3527ms
+2022-11-23 12:27:07.542 +01:00 [INF] User profile is available. Using 'C:\Users\jeanbaptiste.castill\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-23 12:27:07.855 +01:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2022-11-23 12:27:07.856 +01:00 [INF] Quartz Scheduler created
+2022-11-23 12:27:07.856 +01:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2022-11-23 12:27:07.857 +01:00 [INF] RAMJobStore initialized.
+2022-11-23 12:27:07.858 +01:00 [INF] Quartz Scheduler 3.5.0.0 - 'QuartzScheduler' with instanceId 'NON_CLUSTERED' initialized
+2022-11-23 12:27:07.859 +01:00 [INF] Using thread pool 'Quartz.Simpl.DefaultThreadPool', size: 10
+2022-11-23 12:27:07.859 +01:00 [INF] Using job store 'Quartz.Simpl.RAMJobStore', supports persistence: False, clustered: False
+2022-11-23 12:27:07.897 +01:00 [INF] Adding 1 jobs, 1 triggers.
+2022-11-23 12:27:07.901 +01:00 [INF] Adding job: OpenIddict.Quartz.OpenIddictQuartzJob
+2022-11-23 12:27:09.589 +01:00 [INF] Entity Framework Core 6.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.10' with options: None
+2022-11-23 12:27:09.763 +01:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2022-11-23 12:27:10.479 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[@__identifier_0='?' (Size = 22)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."ClientId" = @__identifier_0
+LIMIT 1
+2022-11-23 12:27:10.612 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__identifier_0='?' (Size = 2)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."ClientId" = @__identifier_0
+LIMIT 1
+2022-11-23 12:27:10.613 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__identifier_0='?' (Size = 22)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."ClientId" = @__identifier_0
+LIMIT 1
+2022-11-23 12:27:10.647 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__name_0='?' (Size = 16)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ConcurrencyToken", "o"."Description", "o"."Descriptions", "o"."DisplayName", "o"."DisplayNames", "o"."Name", "o"."Properties", "o"."Resources"
+FROM "OpenIddictScopes" AS "o"
+WHERE "o"."Name" = @__name_0
+LIMIT 1
+2022-11-23 12:27:11.449 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-23 12:27:11.449 +01:00 [INF] Hosting environment: Development
+2022-11-23 12:27:11.449 +01:00 [INF] Content root path: C:\Repos\exercises-security-workshop\3-OpenIDConnect-OAuth2-flows\start\IdentityProvider
+2022-11-23 12:27:11.487 +01:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2022-11-23 12:27:11.506 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44318/.well-known/openid-configuration - -
+2022-11-23 12:27:11.506 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/ - -
+2022-11-23 12:27:11.646 +01:00 [INF] The request address matched a server endpoint: "Configuration".
+2022-11-23 12:27:11.689 +01:00 [INF] The configuration request was successfully extracted: {}.
+2022-11-23 12:27:11.694 +01:00 [INF] The configuration request was successfully validated.
+2022-11-23 12:27:11.728 +01:00 [INF] Executing endpoint 'OpeniddictServer.Controllers.HomeController.Index (IdentityProvider)'
+2022-11-23 12:27:11.743 +01:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller OpeniddictServer.Controllers.HomeController (IdentityProvider).
+2022-11-23 12:27:11.744 +01:00 [INF] The response was successfully returned as a JSON document: {
+  "issuer": "https://localhost:44318/",
+  "authorization_endpoint": "https://localhost:44318/connect/authorize",
+  "token_endpoint": "https://localhost:44318/connect/token",
+  "introspection_endpoint": "https://localhost:44318/connect/introspect",
+  "end_session_endpoint": "https://localhost:44318/connect/logout",
+  "userinfo_endpoint": "https://localhost:44318/connect/userinfo",
+  "jwks_uri": "https://localhost:44318/.well-known/jwks",
+  "grant_types_supported": [
+    "authorization_code",
+    "client_credentials",
+    "implicit",
+    "refresh_token"
+  ],
+  "response_types_supported": [
+    "code",
+    "code id_token",
+    "code id_token token",
+    "code token"
+  ],
+  "response_modes_supported": [
+    "form_post",
+    "fragment",
+    "query"
+  ],
+  "scopes_supported": [
+    "openid",
+    "offline_access",
+    "email",
+    "profile",
+    "roles",
+    "dataEventRecords"
+  ],
+  "claims_supported": [
+    "aud",
+    "exp",
+    "iat",
+    "iss",
+    "sub"
+  ],
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "code_challenge_methods_supported": [
+    "S256"
+  ],
+  "subject_types_supported": [
+    "public"
+  ],
+  "token_endpoint_auth_methods_supported": [
+    "client_secret_basic",
+    "client_secret_post"
+  ],
+  "introspection_endpoint_auth_methods_supported": [
+    "client_secret_basic",
+    "client_secret_post"
+  ],
+  "claims_parameter_supported": false,
+  "request_parameter_supported": false,
+  "request_uri_parameter_supported": false
+}.
+2022-11-23 12:27:11.774 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44318/.well-known/openid-configuration - - - 200 1535 application/json;charset=UTF-8 272.8736ms
+2022-11-23 12:27:12.111 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44318/.well-known/jwks - -
+2022-11-23 12:27:12.120 +01:00 [INF] The request address matched a server endpoint: "Cryptography".
+2022-11-23 12:27:12.125 +01:00 [INF] The cryptography request was successfully extracted: {}.
+2022-11-23 12:27:12.128 +01:00 [INF] The cryptography request was successfully validated.
+2022-11-23 12:27:12.187 +01:00 [INF] The response was successfully returned as a JSON document: {
+  "keys": [
+    {
+      "kid": "E3A47C5BCE3FEF502E6D6DCACA2F5B4B330B66DA",
+      "use": "sig",
+      "kty": "RSA",
+      "alg": "RS256",
+      "e": "AQAB",
+      "n": "4x6yeqfoJIRXKRtLYhBzoiEE__Eu0HUhZcHuFxkToXiIU7EMJgvxT2-QLX4Da328Zuu_dstzVoN6Kh-tPtmvP7YGHMDngrRF7Q5ekKKmPNUZ0o-8gfX5yfVRpGuLiQR_Bhv4GYDdQSmgNP8QTYUZqdKNElxUkHjalm7DXW39D1UlzR2bsYznjgssNv8ePYdUwtsAlHmJtxWvwqBIwtD5bpAPTLPKPv-5hNUYPqii-ze8HY6pQ4lHx8Xgx0939OQzYLUZYNVRp4gZHGRGpgLWzFTRcnPngZoQre8AjCzi0Q_Z_8QutpWN_9lcqppNpbQsWhM1P7wytaLEYHuK5ThcAQ",
+      "x5t": "46R8W84_71AubW3Kyi9bSzMLZto",
+      "x5c": [
+        "MIIC9DCCAdygAwIBAgIIA3nD8lKWXAQwDQYJKoZIhvcNAQELBQAwMDEuMCwGA1UEAxMlT3BlbklkZGljdCBTZXJ2ZXIgU2lnbmluZyBDZXJ0aWZpY2F0ZTAeFw0yMjExMjMxMTI1NTZaFw0yNDExMjMxMTI1NTZaMDAxLjAsBgNVBAMTJU9wZW5JZGRpY3QgU2VydmVyIFNpZ25pbmcgQ2VydGlmaWNhdGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDjHrJ6p+gkhFcpG0tiEHOiIQT/8S7QdSFlwe4XGROheIhTsQwmC/FPb5AtfgNrfbxm6792y3NWg3oqH60+2a8/tgYcwOeCtEXtDl6QoqY81RnSj7yB9fnJ9VGka4uJBH8GG/gZgN1BKaA0/xBNhRmp0o0SXFSQeNqWbsNdbf0PVSXNHZuxjOeOCyw2/x49h1TC2wCUeYm3Fa/CoEjC0PlukA9Ms8o+/7mE1Rg+qKL7N7wdjqlDiUfHxeDHT3f05DNgtRlg1VGniBkcZEamAtbMVNFyc+eBmhCt7wCMLOLRD9n/xC62lY3/2Vyqmk2ltCxaEzU/vDK1osRge4rlOFwBAgMBAAGjEjAQMA4GA1UdDwEB/wQEAwIHgDANBgkqhkiG9w0BAQsFAAOCAQEAAeOggrLKmmfOhfXxFywMohp84kOs1UNgD6dCRBMSX/BzXGAtrEqxuan6xfdDDcPzZlA2URRDvjPXQoDwez5GQB5gb20JguvhurrXq39Y2MGSmN5BWL+UmevicjAZugWtssvTC3yotI3N7yBvY9z5hFKQZb/Bpw67vM0zo61B2ntH/AC6JI0MP7fmcSZbj5oNTf84PNzwbR8B0ejGP9pqLg+kzxrOZwq64HEnJQWhJ/EDwdQ8B8e59spmsVU4nuB3zH4T3XAz7W0c/GEUn+rmEws9Sso+kXxXhRwQltma2INFr48/7a7nY6t3WuBdE5bin78RGgrC5GuQCQ8ol+L08w=="
+      ]
+    }
+  ]
+}.
+2022-11-23 12:27:12.188 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44318/.well-known/jwks - - - 200 1635 application/json;charset=UTF-8 77.1030ms
+2022-11-23 12:27:12.280 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/connect/authorize?client_id=oidc-pkce-confidential&redirect_uri=https%3A%2F%2Flocalhost%3A44360%2Fsignin-oidc&response_type=code&scope=openid%20profile&code_challenge=qeH5QeAwc7igxVwz9JPPHtZMMJJB4vtE3gk0A9q1uGU&code_challenge_method=S256&response_mode=form_post&nonce=638047996322268639.M2VhZGFmZjMtN2M1YS00MjVjLWFkYTUtZmMyZDQzMjBmMDdmZDUxNTJmM2QtNjkxYy00YWM0LWE0MTYtMDlhN2E3NDgwNzRi&state=CfDJ8FCl9LdozMBJiV4cQJICZ8FfIbYbuMFsBQJ6twqbM50VhR49vTbafnQFpOpEHWVqE_uBSSCoXl38gl07vjQXQt0jOhunCQccEUaiALUSXEs7qduYvdm_MbyOsE9vhdVfs956WmVN6-uKD6-9TDCnZoNjjS0ah3gGC-y3DxS7jAGpol_2X9eYui-copS8TXYgA6FMugAvJkyI_nVex2liAGLynG7lHpx91ityHhcuPDW3BJTCx4Mo1t4v5TVqq7kGzbRZskzTRYQiMDvmRhJ8Ocp48uF1ZaPBJ-mG0RpYkfgAov3SuBH7qMN8WKumYrUR6iWuioZ5IrH-sVmXTgMBNyK0svsxv-sqwxlrZS1bkZz4ZJxUQDtIhLWlnF69WWXCVw&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.10.0.0 - -
+2022-11-23 12:27:12.281 +01:00 [INF] The request address matched a server endpoint: "Authorization".
+2022-11-23 12:27:12.300 +01:00 [INF] The authorization request was successfully extracted: {
+  "client_id": "oidc-pkce-confidential",
+  "redirect_uri": "https://localhost:44360/signin-oidc",
+  "response_type": "code",
+  "scope": "openid profile",
+  "code_challenge": "qeH5QeAwc7igxVwz9JPPHtZMMJJB4vtE3gk0A9q1uGU",
+  "code_challenge_method": "S256",
+  "response_mode": "form_post",
+  "nonce": "638047996322268639.M2VhZGFmZjMtN2M1YS00MjVjLWFkYTUtZmMyZDQzMjBmMDdmZDUxNTJmM2QtNjkxYy00YWM0LWE0MTYtMDlhN2E3NDgwNzRi",
+  "state": "CfDJ8FCl9LdozMBJiV4cQJICZ8FfIbYbuMFsBQJ6twqbM50VhR49vTbafnQFpOpEHWVqE_uBSSCoXl38gl07vjQXQt0jOhunCQccEUaiALUSXEs7qduYvdm_MbyOsE9vhdVfs956WmVN6-uKD6-9TDCnZoNjjS0ah3gGC-y3DxS7jAGpol_2X9eYui-copS8TXYgA6FMugAvJkyI_nVex2liAGLynG7lHpx91ityHhcuPDW3BJTCx4Mo1t4v5TVqq7kGzbRZskzTRYQiMDvmRhJ8Ocp48uF1ZaPBJ-mG0RpYkfgAov3SuBH7qMN8WKumYrUR6iWuioZ5IrH-sVmXTgMBNyK0svsxv-sqwxlrZS1bkZz4ZJxUQDtIhLWlnF69WWXCVw",
+  "x-client-SKU": "ID_NETSTANDARD2_0",
+  "x-client-ver": "6.10.0.0"
+}.
+2022-11-23 12:27:12.352 +01:00 [INF] Entity Framework Core 6.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.10' with options: None
+2022-11-23 12:27:12.368 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__identifier_0='?' (Size = 22)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."ClientId" = @__identifier_0
+LIMIT 1
+2022-11-23 12:27:12.432 +01:00 [INF] The authorization request was successfully validated.
+2022-11-23 12:27:12.440 +01:00 [INF] Executing endpoint 'OpeniddictServer.Controllers.AuthorizationController.Authorize (IdentityProvider)'
+2022-11-23 12:27:12.446 +01:00 [INF] Route matched with {action = "Authorize", controller = "Authorization", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authorize() on controller OpeniddictServer.Controllers.AuthorizationController (IdentityProvider).
+2022-11-23 12:27:12.477 +01:00 [INF] Executing ChallengeResult with authentication schemes (["Identity.Application"]).
+2022-11-23 12:27:12.489 +01:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2022-11-23 12:27:12.497 +01:00 [INF] Executed action OpeniddictServer.Controllers.AuthorizationController.Authorize (IdentityProvider) in 44.0762ms
+2022-11-23 12:27:12.497 +01:00 [INF] Executed endpoint 'OpeniddictServer.Controllers.AuthorizationController.Authorize (IdentityProvider)'
+2022-11-23 12:27:12.523 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Identity/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%3Fclient_id%3Doidc-pkce-confidential%26redirect_uri%3Dhttps%253A%252F%252Flocalhost%253A44360%252Fsignin-oidc%26response_type%3Dcode%26scope%3Dopenid%2520profile%26code_challenge%3DqeH5QeAwc7igxVwz9JPPHtZMMJJB4vtE3gk0A9q1uGU%26code_challenge_method%3DS256%26response_mode%3Dform_post%26nonce%3D638047996322268639.M2VhZGFmZjMtN2M1YS00MjVjLWFkYTUtZmMyZDQzMjBmMDdmZDUxNTJmM2QtNjkxYy00YWM0LWE0MTYtMDlhN2E3NDgwNzRi%26state%3DCfDJ8FCl9LdozMBJiV4cQJICZ8FfIbYbuMFsBQJ6twqbM50VhR49vTbafnQFpOpEHWVqE_uBSSCoXl38gl07vjQXQt0jOhunCQccEUaiALUSXEs7qduYvdm_MbyOsE9vhdVfs956WmVN6-uKD6-9TDCnZoNjjS0ah3gGC-y3DxS7jAGpol_2X9eYui-copS8TXYgA6FMugAvJkyI_nVex2liAGLynG7lHpx91ityHhcuPDW3BJTCx4Mo1t4v5TVqq7kGzbRZskzTRYQiMDvmRhJ8Ocp48uF1ZaPBJ-mG0RpYkfgAov3SuBH7qMN8WKumYrUR6iWuioZ5IrH-sVmXTgMBNyK0svsxv-sqwxlrZS1bkZz4ZJxUQDtIhLWlnF69WWXCVw%26x-client-SKU%3DID_NETSTANDARD2_0%26x-client-ver%3D6.10.0.0 - -
+2022-11-23 12:27:12.528 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/connect/authorize?client_id=oidc-pkce-confidential&redirect_uri=https%3A%2F%2Flocalhost%3A44360%2Fsignin-oidc&response_type=code&scope=openid%20profile&code_challenge=qeH5QeAwc7igxVwz9JPPHtZMMJJB4vtE3gk0A9q1uGU&code_challenge_method=S256&response_mode=form_post&nonce=638047996322268639.M2VhZGFmZjMtN2M1YS00MjVjLWFkYTUtZmMyZDQzMjBmMDdmZDUxNTJmM2QtNjkxYy00YWM0LWE0MTYtMDlhN2E3NDgwNzRi&state=CfDJ8FCl9LdozMBJiV4cQJICZ8FfIbYbuMFsBQJ6twqbM50VhR49vTbafnQFpOpEHWVqE_uBSSCoXl38gl07vjQXQt0jOhunCQccEUaiALUSXEs7qduYvdm_MbyOsE9vhdVfs956WmVN6-uKD6-9TDCnZoNjjS0ah3gGC-y3DxS7jAGpol_2X9eYui-copS8TXYgA6FMugAvJkyI_nVex2liAGLynG7lHpx91ityHhcuPDW3BJTCx4Mo1t4v5TVqq7kGzbRZskzTRYQiMDvmRhJ8Ocp48uF1ZaPBJ-mG0RpYkfgAov3SuBH7qMN8WKumYrUR6iWuioZ5IrH-sVmXTgMBNyK0svsxv-sqwxlrZS1bkZz4ZJxUQDtIhLWlnF69WWXCVw&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.10.0.0 - - - 302 - - 248.2708ms
+2022-11-23 12:27:16.883 +01:00 [INF] Executing endpoint '/Account/Login'
+2022-11-23 12:27:16.948 +01:00 [INF] Executing ViewResult, running view Index.
+2022-11-23 12:27:17.080 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2022-11-23 12:27:17.116 +01:00 [INF] Executing handler method OpeniddictServer.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2022-11-23 12:27:17.127 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2022-11-23 12:27:17.129 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2022-11-23 12:27:17.135 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2022-11-23 12:27:17.136 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2022-11-23 12:27:17.762 +01:00 [INF] Executed ViewResult - view Index executed in 6011.3322ms.
+2022-11-23 12:27:17.770 +01:00 [INF] Executed action OpeniddictServer.Controllers.HomeController.Index (IdentityProvider) in 6026.7044ms
+2022-11-23 12:27:17.772 +01:00 [INF] Executed endpoint 'OpeniddictServer.Controllers.HomeController.Index (IdentityProvider)'
+2022-11-23 12:27:17.828 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/ - - - 200 - text/html;+charset=utf-8 6327.5181ms
+2022-11-23 12:27:17.844 +01:00 [INF] Executed page /Account/Login in 763.028ms
+2022-11-23 12:27:17.844 +01:00 [INF] Executed endpoint '/Account/Login'
+2022-11-23 12:27:17.854 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Identity/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%3Fclient_id%3Doidc-pkce-confidential%26redirect_uri%3Dhttps%253A%252F%252Flocalhost%253A44360%252Fsignin-oidc%26response_type%3Dcode%26scope%3Dopenid%2520profile%26code_challenge%3DqeH5QeAwc7igxVwz9JPPHtZMMJJB4vtE3gk0A9q1uGU%26code_challenge_method%3DS256%26response_mode%3Dform_post%26nonce%3D638047996322268639.M2VhZGFmZjMtN2M1YS00MjVjLWFkYTUtZmMyZDQzMjBmMDdmZDUxNTJmM2QtNjkxYy00YWM0LWE0MTYtMDlhN2E3NDgwNzRi%26state%3DCfDJ8FCl9LdozMBJiV4cQJICZ8FfIbYbuMFsBQJ6twqbM50VhR49vTbafnQFpOpEHWVqE_uBSSCoXl38gl07vjQXQt0jOhunCQccEUaiALUSXEs7qduYvdm_MbyOsE9vhdVfs956WmVN6-uKD6-9TDCnZoNjjS0ah3gGC-y3DxS7jAGpol_2X9eYui-copS8TXYgA6FMugAvJkyI_nVex2liAGLynG7lHpx91ityHhcuPDW3BJTCx4Mo1t4v5TVqq7kGzbRZskzTRYQiMDvmRhJ8Ocp48uF1ZaPBJ-mG0RpYkfgAov3SuBH7qMN8WKumYrUR6iWuioZ5IrH-sVmXTgMBNyK0svsxv-sqwxlrZS1bkZz4ZJxUQDtIhLWlnF69WWXCVw%26x-client-SKU%3DID_NETSTANDARD2_0%26x-client-ver%3D6.10.0.0 - - - 200 - text/html;+charset=utf-8 5330.9882ms
+2022-11-23 12:27:17.894 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2022-11-23 12:27:17.905 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 11950 application/javascript;+charset=utf-8 10.6159ms
+2022-11-23 12:27:18.002 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2022-11-23 12:27:18.004 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 11950 application/javascript;+charset=utf-8 1.7645ms
+2022-11-23 12:27:33.401 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44318/Identity/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%3Fclient_id%3Doidc-pkce-confidential%26redirect_uri%3Dhttps%253A%252F%252Flocalhost%253A44360%252Fsignin-oidc%26response_type%3Dcode%26scope%3Dopenid%2520profile%26code_challenge%3DqeH5QeAwc7igxVwz9JPPHtZMMJJB4vtE3gk0A9q1uGU%26code_challenge_method%3DS256%26response_mode%3Dform_post%26nonce%3D638047996322268639.M2VhZGFmZjMtN2M1YS00MjVjLWFkYTUtZmMyZDQzMjBmMDdmZDUxNTJmM2QtNjkxYy00YWM0LWE0MTYtMDlhN2E3NDgwNzRi%26state%3DCfDJ8FCl9LdozMBJiV4cQJICZ8FfIbYbuMFsBQJ6twqbM50VhR49vTbafnQFpOpEHWVqE_uBSSCoXl38gl07vjQXQt0jOhunCQccEUaiALUSXEs7qduYvdm_MbyOsE9vhdVfs956WmVN6-uKD6-9TDCnZoNjjS0ah3gGC-y3DxS7jAGpol_2X9eYui-copS8TXYgA6FMugAvJkyI_nVex2liAGLynG7lHpx91ityHhcuPDW3BJTCx4Mo1t4v5TVqq7kGzbRZskzTRYQiMDvmRhJ8Ocp48uF1ZaPBJ-mG0RpYkfgAov3SuBH7qMN8WKumYrUR6iWuioZ5IrH-sVmXTgMBNyK0svsxv-sqwxlrZS1bkZz4ZJxUQDtIhLWlnF69WWXCVw%26x-client-SKU%3DID_NETSTANDARD2_0%26x-client-ver%3D6.10.0.0 application/x-www-form-urlencoded 260
+2022-11-23 12:27:33.409 +01:00 [INF] CORS policy execution failed.
+2022-11-23 12:27:33.409 +01:00 [INF] Request origin https://localhost:44318 does not have permission to access the resource.
+2022-11-23 12:27:33.414 +01:00 [INF] Executing endpoint '/Account/Login'
+2022-11-23 12:27:33.414 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2022-11-23 12:27:33.458 +01:00 [INF] Executing handler method OpeniddictServer.Areas.Identity.Pages.Account.LoginModel.OnPostAsync - ModelState is "Valid"
+2022-11-23 12:27:33.528 +01:00 [INF] Entity Framework Core 6.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.10' with options: None
+2022-11-23 12:27:33.538 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 14)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-11-23 12:27:33.748 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__user_Id_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ClaimType", "a"."ClaimValue", "a"."UserId"
+FROM "AspNetUserClaims" AS "a"
+WHERE "a"."UserId" = @__user_Id_0
+2022-11-23 12:27:33.793 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a0"."Name"
+FROM "AspNetUserRoles" AS "a"
+INNER JOIN "AspNetRoles" AS "a0" ON "a"."RoleId" = "a0"."Id"
+WHERE "a"."UserId" = @__userId_0
+2022-11-23 12:27:33.799 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-11-23 12:27:33.799 +01:00 [INF] User logged in.
+2022-11-23 12:27:33.801 +01:00 [INF] Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2022-11-23 12:27:33.801 +01:00 [INF] Executing LocalRedirectResult, redirecting to /connect/authorize?client_id=oidc-pkce-confidential&redirect_uri=https%3A%2F%2Flocalhost%3A44360%2Fsignin-oidc&response_type=code&scope=openid%20profile&code_challenge=qeH5QeAwc7igxVwz9JPPHtZMMJJB4vtE3gk0A9q1uGU&code_challenge_method=S256&response_mode=form_post&nonce=638047996322268639.M2VhZGFmZjMtN2M1YS00MjVjLWFkYTUtZmMyZDQzMjBmMDdmZDUxNTJmM2QtNjkxYy00YWM0LWE0MTYtMDlhN2E3NDgwNzRi&state=CfDJ8FCl9LdozMBJiV4cQJICZ8FfIbYbuMFsBQJ6twqbM50VhR49vTbafnQFpOpEHWVqE_uBSSCoXl38gl07vjQXQt0jOhunCQccEUaiALUSXEs7qduYvdm_MbyOsE9vhdVfs956WmVN6-uKD6-9TDCnZoNjjS0ah3gGC-y3DxS7jAGpol_2X9eYui-copS8TXYgA6FMugAvJkyI_nVex2liAGLynG7lHpx91ityHhcuPDW3BJTCx4Mo1t4v5TVqq7kGzbRZskzTRYQiMDvmRhJ8Ocp48uF1ZaPBJ-mG0RpYkfgAov3SuBH7qMN8WKumYrUR6iWuioZ5IrH-sVmXTgMBNyK0svsxv-sqwxlrZS1bkZz4ZJxUQDtIhLWlnF69WWXCVw&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.10.0.0.
+2022-11-23 12:27:33.802 +01:00 [INF] Executed page /Account/Login in 386.9704ms
+2022-11-23 12:27:33.802 +01:00 [INF] Executed endpoint '/Account/Login'
+2022-11-23 12:27:33.803 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44318/Identity/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%3Fclient_id%3Doidc-pkce-confidential%26redirect_uri%3Dhttps%253A%252F%252Flocalhost%253A44360%252Fsignin-oidc%26response_type%3Dcode%26scope%3Dopenid%2520profile%26code_challenge%3DqeH5QeAwc7igxVwz9JPPHtZMMJJB4vtE3gk0A9q1uGU%26code_challenge_method%3DS256%26response_mode%3Dform_post%26nonce%3D638047996322268639.M2VhZGFmZjMtN2M1YS00MjVjLWFkYTUtZmMyZDQzMjBmMDdmZDUxNTJmM2QtNjkxYy00YWM0LWE0MTYtMDlhN2E3NDgwNzRi%26state%3DCfDJ8FCl9LdozMBJiV4cQJICZ8FfIbYbuMFsBQJ6twqbM50VhR49vTbafnQFpOpEHWVqE_uBSSCoXl38gl07vjQXQt0jOhunCQccEUaiALUSXEs7qduYvdm_MbyOsE9vhdVfs956WmVN6-uKD6-9TDCnZoNjjS0ah3gGC-y3DxS7jAGpol_2X9eYui-copS8TXYgA6FMugAvJkyI_nVex2liAGLynG7lHpx91ityHhcuPDW3BJTCx4Mo1t4v5TVqq7kGzbRZskzTRYQiMDvmRhJ8Ocp48uF1ZaPBJ-mG0RpYkfgAov3SuBH7qMN8WKumYrUR6iWuioZ5IrH-sVmXTgMBNyK0svsxv-sqwxlrZS1bkZz4ZJxUQDtIhLWlnF69WWXCVw%26x-client-SKU%3DID_NETSTANDARD2_0%26x-client-ver%3D6.10.0.0 application/x-www-form-urlencoded 260 - 302 - - 401.1716ms
+2022-11-23 12:27:33.807 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/connect/authorize?client_id=oidc-pkce-confidential&redirect_uri=https%3A%2F%2Flocalhost%3A44360%2Fsignin-oidc&response_type=code&scope=openid%20profile&code_challenge=qeH5QeAwc7igxVwz9JPPHtZMMJJB4vtE3gk0A9q1uGU&code_challenge_method=S256&response_mode=form_post&nonce=638047996322268639.M2VhZGFmZjMtN2M1YS00MjVjLWFkYTUtZmMyZDQzMjBmMDdmZDUxNTJmM2QtNjkxYy00YWM0LWE0MTYtMDlhN2E3NDgwNzRi&state=CfDJ8FCl9LdozMBJiV4cQJICZ8FfIbYbuMFsBQJ6twqbM50VhR49vTbafnQFpOpEHWVqE_uBSSCoXl38gl07vjQXQt0jOhunCQccEUaiALUSXEs7qduYvdm_MbyOsE9vhdVfs956WmVN6-uKD6-9TDCnZoNjjS0ah3gGC-y3DxS7jAGpol_2X9eYui-copS8TXYgA6FMugAvJkyI_nVex2liAGLynG7lHpx91ityHhcuPDW3BJTCx4Mo1t4v5TVqq7kGzbRZskzTRYQiMDvmRhJ8Ocp48uF1ZaPBJ-mG0RpYkfgAov3SuBH7qMN8WKumYrUR6iWuioZ5IrH-sVmXTgMBNyK0svsxv-sqwxlrZS1bkZz4ZJxUQDtIhLWlnF69WWXCVw&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.10.0.0 - -
+2022-11-23 12:27:33.808 +01:00 [INF] The request address matched a server endpoint: "Authorization".
+2022-11-23 12:27:33.809 +01:00 [INF] The authorization request was successfully extracted: {
+  "client_id": "oidc-pkce-confidential",
+  "redirect_uri": "https://localhost:44360/signin-oidc",
+  "response_type": "code",
+  "scope": "openid profile",
+  "code_challenge": "qeH5QeAwc7igxVwz9JPPHtZMMJJB4vtE3gk0A9q1uGU",
+  "code_challenge_method": "S256",
+  "response_mode": "form_post",
+  "nonce": "638047996322268639.M2VhZGFmZjMtN2M1YS00MjVjLWFkYTUtZmMyZDQzMjBmMDdmZDUxNTJmM2QtNjkxYy00YWM0LWE0MTYtMDlhN2E3NDgwNzRi",
+  "state": "CfDJ8FCl9LdozMBJiV4cQJICZ8FfIbYbuMFsBQJ6twqbM50VhR49vTbafnQFpOpEHWVqE_uBSSCoXl38gl07vjQXQt0jOhunCQccEUaiALUSXEs7qduYvdm_MbyOsE9vhdVfs956WmVN6-uKD6-9TDCnZoNjjS0ah3gGC-y3DxS7jAGpol_2X9eYui-copS8TXYgA6FMugAvJkyI_nVex2liAGLynG7lHpx91ityHhcuPDW3BJTCx4Mo1t4v5TVqq7kGzbRZskzTRYQiMDvmRhJ8Ocp48uF1ZaPBJ-mG0RpYkfgAov3SuBH7qMN8WKumYrUR6iWuioZ5IrH-sVmXTgMBNyK0svsxv-sqwxlrZS1bkZz4ZJxUQDtIhLWlnF69WWXCVw",
+  "x-client-SKU": "ID_NETSTANDARD2_0",
+  "x-client-ver": "6.10.0.0"
+}.
+2022-11-23 12:27:33.812 +01:00 [INF] Entity Framework Core 6.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.10' with options: None
+2022-11-23 12:27:33.813 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__identifier_0='?' (Size = 22)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."ClientId" = @__identifier_0
+LIMIT 1
+2022-11-23 12:27:33.816 +01:00 [INF] The authorization request was successfully validated.
+2022-11-23 12:27:33.822 +01:00 [INF] Executing endpoint 'OpeniddictServer.Controllers.AuthorizationController.Authorize (IdentityProvider)'
+2022-11-23 12:27:33.822 +01:00 [INF] Route matched with {action = "Authorize", controller = "Authorization", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authorize() on controller OpeniddictServer.Controllers.AuthorizationController (IdentityProvider).
+2022-11-23 12:27:33.842 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."Id" = @__p_0
+LIMIT 1
+2022-11-23 12:27:33.952 +01:00 [INF] Executed DbCommand (11ms) [Parameters=[@__subject_0='?' (Size = 36), @__status_1='?' (Size = 5), @__type_2='?' (Size = 9), @__key_3='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ApplicationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."Properties", "o"."Scopes", "o"."Status", "o"."Subject", "o"."Type", "o0"."Id", "o0"."ClientId", "o0"."ClientSecret", "o0"."ConcurrencyToken", "o0"."ConsentType", "o0"."DisplayName", "o0"."DisplayNames", "o0"."Permissions", "o0"."PostLogoutRedirectUris", "o0"."Properties", "o0"."RedirectUris", "o0"."Requirements", "o0"."Type"
+FROM "OpenIddictAuthorizations" AS "o"
+LEFT JOIN "OpenIddictApplications" AS "o0" ON "o"."ApplicationId" = "o0"."Id"
+INNER JOIN "OpenIddictApplications" AS "o1" ON "o0"."Id" = "o1"."Id"
+WHERE ((("o"."Subject" = @__subject_0) AND ("o"."Status" = @__status_1)) AND ("o"."Type" = @__type_2)) AND ("o1"."Id" = @__key_3)
+2022-11-23 12:27:34.041 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__user_Id_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ClaimType", "a"."ClaimValue", "a"."UserId"
+FROM "AspNetUserClaims" AS "a"
+WHERE "a"."UserId" = @__user_Id_0
+2022-11-23 12:27:34.042 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a0"."Name"
+FROM "AspNetUserRoles" AS "a"
+INNER JOIN "AspNetRoles" AS "a0" ON "a"."RoleId" = "a0"."Id"
+WHERE "a"."UserId" = @__userId_0
+2022-11-23 12:27:34.147 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ConcurrencyToken", "o"."Description", "o"."Descriptions", "o"."DisplayName", "o"."DisplayNames", "o"."Name", "o"."Properties", "o"."Resources"
+FROM "OpenIddictScopes" AS "o"
+WHERE "o"."Name" IN ('openid', 'profile')
+2022-11-23 12:27:34.156 +01:00 [INF] Executing SignInResult with authentication scheme (OpenIddict.Server.AspNetCore) and the following principal: System.Security.Claims.ClaimsPrincipal.
+2022-11-23 12:27:34.234 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."Id" = @__key_0
+LIMIT 1
+2022-11-23 12:27:34.247 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ApplicationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."Properties", "o"."Scopes", "o"."Status", "o"."Subject", "o"."Type"
+FROM "OpenIddictAuthorizations" AS "o"
+WHERE "o"."Id" = @__key_0
+LIMIT 1
+2022-11-23 12:27:34.519 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (Size = 36), @p2='?' (Size = 36), @p3='?' (Size = 36), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?', @p7='?', @p8='?' (DbType = DateTime), @p9='?', @p10='?' (Size = 5), @p11='?' (Size = 36), @p12='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "OpenIddictTokens" ("Id", "ApplicationId", "AuthorizationId", "ConcurrencyToken", "CreationDate", "ExpirationDate", "Payload", "Properties", "RedemptionDate", "ReferenceId", "Status", "Subject", "Type")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2022-11-23 12:27:34.924 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."Id" = @__key_0
+LIMIT 1
+2022-11-23 12:27:34.925 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ApplicationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."Properties", "o"."Scopes", "o"."Status", "o"."Subject", "o"."Type"
+FROM "OpenIddictAuthorizations" AS "o"
+WHERE "o"."Id" = @__key_0
+LIMIT 1
+2022-11-23 12:27:34.960 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__identifier_0='?' (Size = 44)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ApplicationId", "o"."AuthorizationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."ExpirationDate", "o"."Payload", "o"."Properties", "o"."RedemptionDate", "o"."ReferenceId", "o"."Status", "o"."Subject", "o"."Type", "o0"."Id", "o0"."ClientId", "o0"."ClientSecret", "o0"."ConcurrencyToken", "o0"."ConsentType", "o0"."DisplayName", "o0"."DisplayNames", "o0"."Permissions", "o0"."PostLogoutRedirectUris", "o0"."Properties", "o0"."RedirectUris", "o0"."Requirements", "o0"."Type", "o1"."Id", "o1"."ApplicationId", "o1"."ConcurrencyToken", "o1"."CreationDate", "o1"."Properties", "o1"."Scopes", "o1"."Status", "o1"."Subject", "o1"."Type"
+FROM "OpenIddictTokens" AS "o"
+LEFT JOIN "OpenIddictApplications" AS "o0" ON "o"."ApplicationId" = "o0"."Id"
+LEFT JOIN "OpenIddictAuthorizations" AS "o1" ON "o"."AuthorizationId" = "o1"."Id"
+WHERE "o"."ReferenceId" = @__identifier_0
+LIMIT 1
+2022-11-23 12:27:34.999 +01:00 [INF] Executed DbCommand (14ms) [Parameters=[@p12='?' (Size = 36), @p0='?' (Size = 36), @p1='?' (Size = 36), @p2='?' (Size = 36), @p13='?' (Size = 36), @p3='?' (DbType = DateTime), @p4='?' (DbType = DateTime), @p5='?' (Size = 2667), @p6='?', @p7='?' (DbType = DateTime), @p8='?' (Size = 44), @p9='?' (Size = 5), @p10='?' (Size = 36), @p11='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "OpenIddictTokens" SET "ApplicationId" = @p0, "AuthorizationId" = @p1, "ConcurrencyToken" = @p2, "CreationDate" = @p3, "ExpirationDate" = @p4, "Payload" = @p5, "Properties" = @p6, "RedemptionDate" = @p7, "ReferenceId" = @p8, "Status" = @p9, "Subject" = @p10, "Type" = @p11
+WHERE "Id" = @p12 AND "ConcurrencyToken" = @p13;
+SELECT changes();
+2022-11-23 12:27:35.030 +01:00 [INF] The authorization response was successfully returned to 'https://localhost:44360/signin-oidc' using the form post response mode: {
+  "code": "[redacted]",
+  "state": "CfDJ8FCl9LdozMBJiV4cQJICZ8FfIbYbuMFsBQJ6twqbM50VhR49vTbafnQFpOpEHWVqE_uBSSCoXl38gl07vjQXQt0jOhunCQccEUaiALUSXEs7qduYvdm_MbyOsE9vhdVfs956WmVN6-uKD6-9TDCnZoNjjS0ah3gGC-y3DxS7jAGpol_2X9eYui-copS8TXYgA6FMugAvJkyI_nVex2liAGLynG7lHpx91ityHhcuPDW3BJTCx4Mo1t4v5TVqq7kGzbRZskzTRYQiMDvmRhJ8Ocp48uF1ZaPBJ-mG0RpYkfgAov3SuBH7qMN8WKumYrUR6iWuioZ5IrH-sVmXTgMBNyK0svsxv-sqwxlrZS1bkZz4ZJxUQDtIhLWlnF69WWXCVw"
+}.
+2022-11-23 12:27:35.060 +01:00 [INF] Executed action OpeniddictServer.Controllers.AuthorizationController.Authorize (IdentityProvider) in 1237.7082ms
+2022-11-23 12:27:35.060 +01:00 [INF] Executed endpoint 'OpeniddictServer.Controllers.AuthorizationController.Authorize (IdentityProvider)'
+2022-11-23 12:27:35.062 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/connect/authorize?client_id=oidc-pkce-confidential&redirect_uri=https%3A%2F%2Flocalhost%3A44360%2Fsignin-oidc&response_type=code&scope=openid%20profile&code_challenge=qeH5QeAwc7igxVwz9JPPHtZMMJJB4vtE3gk0A9q1uGU&code_challenge_method=S256&response_mode=form_post&nonce=638047996322268639.M2VhZGFmZjMtN2M1YS00MjVjLWFkYTUtZmMyZDQzMjBmMDdmZDUxNTJmM2QtNjkxYy00YWM0LWE0MTYtMDlhN2E3NDgwNzRi&state=CfDJ8FCl9LdozMBJiV4cQJICZ8FfIbYbuMFsBQJ6twqbM50VhR49vTbafnQFpOpEHWVqE_uBSSCoXl38gl07vjQXQt0jOhunCQccEUaiALUSXEs7qduYvdm_MbyOsE9vhdVfs956WmVN6-uKD6-9TDCnZoNjjS0ah3gGC-y3DxS7jAGpol_2X9eYui-copS8TXYgA6FMugAvJkyI_nVex2liAGLynG7lHpx91ityHhcuPDW3BJTCx4Mo1t4v5TVqq7kGzbRZskzTRYQiMDvmRhJ8Ocp48uF1ZaPBJ-mG0RpYkfgAov3SuBH7qMN8WKumYrUR6iWuioZ5IrH-sVmXTgMBNyK0svsxv-sqwxlrZS1bkZz4ZJxUQDtIhLWlnF69WWXCVw&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.10.0.0 - - - 200 - text/html;charset=UTF-8 1255.5811ms
+2022-11-23 12:27:35.100 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2022-11-23 12:27:35.101 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 11950 application/javascript;+charset=utf-8 1.1687ms
+2022-11-23 12:27:35.360 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/connect/token application/x-www-form-urlencoded 272
+2022-11-23 12:27:35.360 +01:00 [INF] The request address matched a server endpoint: "Token".
+2022-11-23 12:27:35.373 +01:00 [INF] The token request was successfully extracted: {
+  "client_id": "oidc-pkce-confidential",
+  "client_secret": "[redacted]",
+  "code": "[redacted]",
+  "grant_type": "authorization_code",
+  "redirect_uri": "https://localhost:44360/signin-oidc",
+  "code_verifier": "05gERk_oTJnCwc4ZOO6IjsYTfSzQdjGFm3MsBoHJ368"
+}.
+2022-11-23 12:27:35.396 +01:00 [INF] Entity Framework Core 6.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.10' with options: None
+2022-11-23 12:27:35.397 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__identifier_0='?' (Size = 22)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."ClientId" = @__identifier_0
+LIMIT 1
+2022-11-23 12:27:35.487 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__identifier_0='?' (Size = 44)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ApplicationId", "o"."AuthorizationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."ExpirationDate", "o"."Payload", "o"."Properties", "o"."RedemptionDate", "o"."ReferenceId", "o"."Status", "o"."Subject", "o"."Type", "o0"."Id", "o0"."ClientId", "o0"."ClientSecret", "o0"."ConcurrencyToken", "o0"."ConsentType", "o0"."DisplayName", "o0"."DisplayNames", "o0"."Permissions", "o0"."PostLogoutRedirectUris", "o0"."Properties", "o0"."RedirectUris", "o0"."Requirements", "o0"."Type", "o1"."Id", "o1"."ApplicationId", "o1"."ConcurrencyToken", "o1"."CreationDate", "o1"."Properties", "o1"."Scopes", "o1"."Status", "o1"."Subject", "o1"."Type"
+FROM "OpenIddictTokens" AS "o"
+LEFT JOIN "OpenIddictApplications" AS "o0" ON "o"."ApplicationId" = "o0"."Id"
+LEFT JOIN "OpenIddictAuthorizations" AS "o1" ON "o"."AuthorizationId" = "o1"."Id"
+WHERE "o"."ReferenceId" = @__identifier_0
+LIMIT 1
+2022-11-23 12:27:35.757 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ApplicationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."Properties", "o"."Scopes", "o"."Status", "o"."Subject", "o"."Type", "o0"."Id", "o0"."ClientId", "o0"."ClientSecret", "o0"."ConcurrencyToken", "o0"."ConsentType", "o0"."DisplayName", "o0"."DisplayNames", "o0"."Permissions", "o0"."PostLogoutRedirectUris", "o0"."Properties", "o0"."RedirectUris", "o0"."Requirements", "o0"."Type"
+FROM "OpenIddictAuthorizations" AS "o"
+LEFT JOIN "OpenIddictApplications" AS "o0" ON "o"."ApplicationId" = "o0"."Id"
+WHERE "o"."Id" = @__key_0
+LIMIT 1
+2022-11-23 12:27:35.770 +01:00 [INF] The token request was successfully validated.
+2022-11-23 12:27:35.775 +01:00 [INF] Executing endpoint 'OpeniddictServer.Controllers.AuthorizationController.Exchange (IdentityProvider)'
+2022-11-23 12:27:35.779 +01:00 [INF] Route matched with {action = "Exchange", controller = "Authorization", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Exchange() on controller OpeniddictServer.Controllers.AuthorizationController (IdentityProvider).
+2022-11-23 12:27:35.790 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."Id" = @__p_0
+LIMIT 1
+2022-11-23 12:27:35.791 +01:00 [INF] Executing SignInResult with authentication scheme (OpenIddict.Server.AspNetCore) and the following principal: System.Security.Claims.ClaimsPrincipal.
+2022-11-23 12:27:35.815 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__identifier_0='?' (Size = 44)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ApplicationId", "o"."AuthorizationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."ExpirationDate", "o"."Payload", "o"."Properties", "o"."RedemptionDate", "o"."ReferenceId", "o"."Status", "o"."Subject", "o"."Type", "o0"."Id", "o0"."ClientId", "o0"."ClientSecret", "o0"."ConcurrencyToken", "o0"."ConsentType", "o0"."DisplayName", "o0"."DisplayNames", "o0"."Permissions", "o0"."PostLogoutRedirectUris", "o0"."Properties", "o0"."RedirectUris", "o0"."Requirements", "o0"."Type", "o1"."Id", "o1"."ApplicationId", "o1"."ConcurrencyToken", "o1"."CreationDate", "o1"."Properties", "o1"."Scopes", "o1"."Status", "o1"."Subject", "o1"."Type"
+FROM "OpenIddictTokens" AS "o"
+LEFT JOIN "OpenIddictApplications" AS "o0" ON "o"."ApplicationId" = "o0"."Id"
+LEFT JOIN "OpenIddictAuthorizations" AS "o1" ON "o"."AuthorizationId" = "o1"."Id"
+WHERE "o"."ReferenceId" = @__identifier_0
+LIMIT 1
+2022-11-23 12:27:35.821 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@p12='?' (Size = 36), @p0='?' (Size = 36), @p1='?' (Size = 36), @p2='?' (Size = 36), @p13='?' (Size = 36), @p3='?' (DbType = DateTime), @p4='?' (DbType = DateTime), @p5='?' (Size = 2667), @p6='?', @p7='?' (DbType = DateTime), @p8='?' (Size = 44), @p9='?' (Size = 8), @p10='?' (Size = 36), @p11='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "OpenIddictTokens" SET "ApplicationId" = @p0, "AuthorizationId" = @p1, "ConcurrencyToken" = @p2, "CreationDate" = @p3, "ExpirationDate" = @p4, "Payload" = @p5, "Properties" = @p6, "RedemptionDate" = @p7, "ReferenceId" = @p8, "Status" = @p9, "Subject" = @p10, "Type" = @p11
+WHERE "Id" = @p12 AND "ConcurrencyToken" = @p13;
+SELECT changes();
+2022-11-23 12:27:35.827 +01:00 [INF] The token 'd0898fe5-fc9e-4ec9-b4d9-fe61b92f7627' was successfully marked as redeemed.
+2022-11-23 12:27:35.832 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."Id" = @__key_0
+LIMIT 1
+2022-11-23 12:27:35.833 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ApplicationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."Properties", "o"."Scopes", "o"."Status", "o"."Subject", "o"."Type"
+FROM "OpenIddictAuthorizations" AS "o"
+WHERE "o"."Id" = @__key_0
+LIMIT 1
+2022-11-23 12:27:35.836 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (Size = 36), @p2='?' (Size = 36), @p3='?' (Size = 36), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?', @p7='?', @p8='?' (DbType = DateTime), @p9='?', @p10='?' (Size = 5), @p11='?' (Size = 36), @p12='?' (Size = 12)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "OpenIddictTokens" ("Id", "ApplicationId", "AuthorizationId", "ConcurrencyToken", "CreationDate", "ExpirationDate", "Payload", "Properties", "RedemptionDate", "ReferenceId", "Status", "Subject", "Type")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2022-11-23 12:27:35.866 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."Id" = @__key_0
+LIMIT 1
+2022-11-23 12:27:35.867 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ApplicationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."Properties", "o"."Scopes", "o"."Status", "o"."Subject", "o"."Type"
+FROM "OpenIddictAuthorizations" AS "o"
+WHERE "o"."Id" = @__key_0
+LIMIT 1
+2022-11-23 12:27:35.870 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (Size = 36), @p2='?' (Size = 36), @p3='?' (Size = 36), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?', @p7='?', @p8='?' (DbType = DateTime), @p9='?', @p10='?' (Size = 5), @p11='?' (Size = 36), @p12='?' (Size = 8)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "OpenIddictTokens" ("Id", "ApplicationId", "AuthorizationId", "ConcurrencyToken", "CreationDate", "ExpirationDate", "Payload", "Properties", "RedemptionDate", "ReferenceId", "Status", "Subject", "Type")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2022-11-23 12:27:35.889 +01:00 [INF] The response was successfully returned as a JSON document: {
+  "access_token": "[redacted]",
+  "token_type": "Bearer",
+  "expires_in": 3599,
+  "scope": "openid profile",
+  "id_token": "[redacted]"
+}.
+2022-11-23 12:27:35.890 +01:00 [INF] Executed action OpeniddictServer.Controllers.AuthorizationController.Exchange (IdentityProvider) in 110.9635ms
+2022-11-23 12:27:35.890 +01:00 [INF] Executed endpoint 'OpeniddictServer.Controllers.AuthorizationController.Exchange (IdentityProvider)'
+2022-11-23 12:27:35.890 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:44318/connect/token application/x-www-form-urlencoded 272 - 200 2212 application/json;charset=UTF-8 530.4560ms
+2022-11-23 12:27:36.125 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44318/connect/userinfo - -
+2022-11-23 12:27:36.126 +01:00 [INF] The request address matched a server endpoint: "Userinfo".
+2022-11-23 12:27:36.133 +01:00 [INF] The userinfo request was successfully extracted: {
+  "access_token": "[redacted]"
+}.
+2022-11-23 12:27:36.161 +01:00 [INF] Entity Framework Core 6.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.10' with options: None
+2022-11-23 12:27:36.172 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ApplicationId", "o"."AuthorizationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."ExpirationDate", "o"."Payload", "o"."Properties", "o"."RedemptionDate", "o"."ReferenceId", "o"."Status", "o"."Subject", "o"."Type", "o0"."Id", "o0"."ClientId", "o0"."ClientSecret", "o0"."ConcurrencyToken", "o0"."ConsentType", "o0"."DisplayName", "o0"."DisplayNames", "o0"."Permissions", "o0"."PostLogoutRedirectUris", "o0"."Properties", "o0"."RedirectUris", "o0"."Requirements", "o0"."Type", "o1"."Id", "o1"."ApplicationId", "o1"."ConcurrencyToken", "o1"."CreationDate", "o1"."Properties", "o1"."Scopes", "o1"."Status", "o1"."Subject", "o1"."Type"
+FROM "OpenIddictTokens" AS "o"
+LEFT JOIN "OpenIddictApplications" AS "o0" ON "o"."ApplicationId" = "o0"."Id"
+LEFT JOIN "OpenIddictAuthorizations" AS "o1" ON "o"."AuthorizationId" = "o1"."Id"
+WHERE "o"."Id" = @__key_0
+LIMIT 1
+2022-11-23 12:27:36.173 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ApplicationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."Properties", "o"."Scopes", "o"."Status", "o"."Subject", "o"."Type", "o0"."Id", "o0"."ClientId", "o0"."ClientSecret", "o0"."ConcurrencyToken", "o0"."ConsentType", "o0"."DisplayName", "o0"."DisplayNames", "o0"."Permissions", "o0"."PostLogoutRedirectUris", "o0"."Properties", "o0"."RedirectUris", "o0"."Requirements", "o0"."Type"
+FROM "OpenIddictAuthorizations" AS "o"
+LEFT JOIN "OpenIddictApplications" AS "o0" ON "o"."ApplicationId" = "o0"."Id"
+WHERE "o"."Id" = @__key_0
+LIMIT 1
+2022-11-23 12:27:36.174 +01:00 [INF] The userinfo request was successfully validated.
+2022-11-23 12:27:36.189 +01:00 [INF] Executing endpoint 'OpeniddictServer.Controllers.UserinfoController.Userinfo (IdentityProvider)'
+2022-11-23 12:27:36.192 +01:00 [INF] Route matched with {action = "Userinfo", controller = "Userinfo", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Userinfo() on controller OpeniddictServer.Controllers.UserinfoController (IdentityProvider).
+2022-11-23 12:27:36.195 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."Id" = @__p_0
+LIMIT 1
+2022-11-23 12:27:36.199 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-11-23 12:27:36.212 +01:00 [INF] Executed action OpeniddictServer.Controllers.UserinfoController.Userinfo (IdentityProvider) in 19.8827ms
+2022-11-23 12:27:36.212 +01:00 [INF] Executed endpoint 'OpeniddictServer.Controllers.UserinfoController.Userinfo (IdentityProvider)'
+2022-11-23 12:27:36.212 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44318/connect/userinfo - - - 200 - application/json;+charset=utf-8 86.7900ms
+2022-11-23 12:29:00.259 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/connect/logout?post_logout_redirect_uri=https%3A%2F%2Flocalhost%3A44360%2Fsignout-callback-oidc&id_token_hint=eyJhbGciOiJSUzI1NiIsImtpZCI6IkUzQTQ3QzVCQ0UzRkVGNTAyRTZENkRDQUNBMkY1QjRCMzMwQjY2REEiLCJ4NXQiOiI0NlI4Vzg0XzcxQXViVzNLeWk5YlN6TUxadG8iLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiIzMjk4NjVjNi00YjljLTQ2ZjAtOWJmYi1lN2RiNjdiMTllYmIiLCJuYW1lIjoiYWxpY2VAYWxpY2UuY2giLCJvaV9hdV9pZCI6ImNhYWFiNjQyLTA1ZWUtNDhhNS04OGRhLTVlZDg5Yzk5NWNkZSIsImF6cCI6Im9pZGMtcGtjZS1jb25maWRlbnRpYWwiLCJub25jZSI6IjYzODA0Nzk5NjMyMjI2ODYzOS5NMlZoWkdGbVpqTXROMk0xWVMwME1qVmpMV0ZrWVRVdFptTXlaRFF6TWpCbU1EZG1aRFV4TlRKbU0yUXROamt4WXkwMFlXTTBMV0UwTVRZdE1EbGhOMkUzTkRnd056UmkiLCJhdF9oYXNoIjoidnFuclVGY1BJejVUSnN3MVljYzB6QSIsIm9pX3Rrbl9pZCI6ImJiZTY3MTNiLWIwYjItNDE5Ni1hMDU3LWZlNDM3NjI1MmRiYSIsImF1ZCI6Im9pZGMtcGtjZS1jb25maWRlbnRpYWwiLCJleHAiOjE2NjkyMDQwNTUsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjQ0MzE4LyIsImlhdCI6MTY2OTIwMjg1NX0.4DgojRn8RmdiS8uHcIVA5rBboI4rp0oc7sICkyj3JjYCSw3SbC2tbUQjkTOr3NQUO3_P1WPkPx-Q5ZsK66sJs9QBZGOgwWztzBr2dt30zTwtahFEf9AVM7-OSsYWE7_jM80rtYQTVdypQgUWbPAc67V4tXclJCfoaqLAhqQJstuxa1GxHbiDkW1vx0SmxpbaAaSYTyzulxQocyNhTEZbLxDLXjpNURySOuBKUGxfYfmlYjVrvB4qD3hnU_JuKIwhWM9ey1ImpjhnxCthUb4eGZUkOdIg2sa0SMyvw3O71_Ukdkj4P5Xeq_CfswXN43n41AaQh7YHyb6DIZdRGAkq0A&state=CfDJ8FCl9LdozMBJiV4cQJICZ8H5SOjZRRSnENW6YnOFf4Mzth8gi1-9rZS7EKZZXl1sJovMt2pei-7vDoMf-S6-zqezNfswj-0F_pzhbTbBPYiTtNqmhW7uf2iuuw2yEnR8S6bgucDC5bZmaVW82iW5UYM&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.10.0.0 - -
+2022-11-23 12:29:00.271 +01:00 [INF] The request address matched a server endpoint: "Logout".
+2022-11-23 12:29:00.276 +01:00 [INF] The logout request was successfully extracted: {
+  "post_logout_redirect_uri": "https://localhost:44360/signout-callback-oidc",
+  "id_token_hint": "[redacted]",
+  "state": "CfDJ8FCl9LdozMBJiV4cQJICZ8H5SOjZRRSnENW6YnOFf4Mzth8gi1-9rZS7EKZZXl1sJovMt2pei-7vDoMf-S6-zqezNfswj-0F_pzhbTbBPYiTtNqmhW7uf2iuuw2yEnR8S6bgucDC5bZmaVW82iW5UYM",
+  "x-client-SKU": "ID_NETSTANDARD2_0",
+  "x-client-ver": "6.10.0.0"
+}.
+2022-11-23 12:29:00.309 +01:00 [INF] Entity Framework Core 6.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.10' with options: None
+2022-11-23 12:29:00.334 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__address_0='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE (@__address_0 = '') OR (instr("o"."PostLogoutRedirectUris", @__address_0) > 0)
+2022-11-23 12:29:00.344 +01:00 [INF] The logout request was successfully validated.
+2022-11-23 12:29:00.349 +01:00 [INF] Executing endpoint 'OpeniddictServer.Controllers.AuthorizationController.Logout (IdentityProvider)'
+2022-11-23 12:29:00.350 +01:00 [INF] Route matched with {action = "Logout", controller = "Authorization", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Logout() on controller OpeniddictServer.Controllers.AuthorizationController (IdentityProvider).
+2022-11-23 12:29:00.591 +01:00 [INF] Executing ViewResult, running view Logout.
+2022-11-23 12:29:00.626 +01:00 [INF] Executed ViewResult - view Logout executed in 275.097ms.
+2022-11-23 12:29:00.626 +01:00 [INF] Executed action OpeniddictServer.Controllers.AuthorizationController.Logout (IdentityProvider) in 275.6391ms
+2022-11-23 12:29:00.626 +01:00 [INF] Executed endpoint 'OpeniddictServer.Controllers.AuthorizationController.Logout (IdentityProvider)'
+2022-11-23 12:29:00.636 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/connect/logout?post_logout_redirect_uri=https%3A%2F%2Flocalhost%3A44360%2Fsignout-callback-oidc&id_token_hint=eyJhbGciOiJSUzI1NiIsImtpZCI6IkUzQTQ3QzVCQ0UzRkVGNTAyRTZENkRDQUNBMkY1QjRCMzMwQjY2REEiLCJ4NXQiOiI0NlI4Vzg0XzcxQXViVzNLeWk5YlN6TUxadG8iLCJ0eXAiOiJKV1QifQ.eyJzdWIiOiIzMjk4NjVjNi00YjljLTQ2ZjAtOWJmYi1lN2RiNjdiMTllYmIiLCJuYW1lIjoiYWxpY2VAYWxpY2UuY2giLCJvaV9hdV9pZCI6ImNhYWFiNjQyLTA1ZWUtNDhhNS04OGRhLTVlZDg5Yzk5NWNkZSIsImF6cCI6Im9pZGMtcGtjZS1jb25maWRlbnRpYWwiLCJub25jZSI6IjYzODA0Nzk5NjMyMjI2ODYzOS5NMlZoWkdGbVpqTXROMk0xWVMwME1qVmpMV0ZrWVRVdFptTXlaRFF6TWpCbU1EZG1aRFV4TlRKbU0yUXROamt4WXkwMFlXTTBMV0UwTVRZdE1EbGhOMkUzTkRnd056UmkiLCJhdF9oYXNoIjoidnFuclVGY1BJejVUSnN3MVljYzB6QSIsIm9pX3Rrbl9pZCI6ImJiZTY3MTNiLWIwYjItNDE5Ni1hMDU3LWZlNDM3NjI1MmRiYSIsImF1ZCI6Im9pZGMtcGtjZS1jb25maWRlbnRpYWwiLCJleHAiOjE2NjkyMDQwNTUsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjQ0MzE4LyIsImlhdCI6MTY2OTIwMjg1NX0.4DgojRn8RmdiS8uHcIVA5rBboI4rp0oc7sICkyj3JjYCSw3SbC2tbUQjkTOr3NQUO3_P1WPkPx-Q5ZsK66sJs9QBZGOgwWztzBr2dt30zTwtahFEf9AVM7-OSsYWE7_jM80rtYQTVdypQgUWbPAc67V4tXclJCfoaqLAhqQJstuxa1GxHbiDkW1vx0SmxpbaAaSYTyzulxQocyNhTEZbLxDLXjpNURySOuBKUGxfYfmlYjVrvB4qD3hnU_JuKIwhWM9ey1ImpjhnxCthUb4eGZUkOdIg2sa0SMyvw3O71_Ukdkj4P5Xeq_CfswXN43n41AaQh7YHyb6DIZdRGAkq0A&state=CfDJ8FCl9LdozMBJiV4cQJICZ8H5SOjZRRSnENW6YnOFf4Mzth8gi1-9rZS7EKZZXl1sJovMt2pei-7vDoMf-S6-zqezNfswj-0F_pzhbTbBPYiTtNqmhW7uf2iuuw2yEnR8S6bgucDC5bZmaVW82iW5UYM&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.10.0.0 - - - 200 - text/html;+charset=utf-8 377.4028ms
+2022-11-23 12:29:00.686 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2022-11-23 12:29:00.687 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 11950 application/javascript;+charset=utf-8 1.1500ms
+2022-11-23 12:29:05.676 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44318/connect/logout application/x-www-form-urlencoded 1657
+2022-11-23 12:29:05.678 +01:00 [INF] CORS policy execution failed.
+2022-11-23 12:29:05.678 +01:00 [INF] Request origin https://localhost:44318 does not have permission to access the resource.
+2022-11-23 12:29:05.678 +01:00 [INF] The request address matched a server endpoint: "Logout".
+2022-11-23 12:29:05.679 +01:00 [INF] The logout request was successfully extracted: {
+  "post_logout_redirect_uri": "https://localhost:44360/signout-callback-oidc",
+  "id_token_hint": "[redacted]",
+  "state": "CfDJ8FCl9LdozMBJiV4cQJICZ8H5SOjZRRSnENW6YnOFf4Mzth8gi1-9rZS7EKZZXl1sJovMt2pei-7vDoMf-S6-zqezNfswj-0F_pzhbTbBPYiTtNqmhW7uf2iuuw2yEnR8S6bgucDC5bZmaVW82iW5UYM",
+  "x-client-SKU": "ID_NETSTANDARD2_0",
+  "x-client-ver": "6.10.0.0",
+  "Confirm": "Yes",
+  "__RequestVerificationToken": "CfDJ8FCl9LdozMBJiV4cQJICZ8FLFCqx_0f0hOLFZLt_Hc6Te5txwCtWj7r2zAj6QgVhZM8BVj4mHSgKB4SA-3ucFACB7g3M9-AXUSuJKEf2Ou3ZvUHuq2IZj9kkd0TmA7pbzmKMKauE6T8J6pnQwvMyQOO_TrOAX2jcXFGa7dAuBy5Kc8pGBF5Oaa-ulSJGLdy6Sw"
+}.
+2022-11-23 12:29:05.680 +01:00 [INF] Entity Framework Core 6.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.10' with options: None
+2022-11-23 12:29:05.681 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__address_0='?' (Size = 45)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE (@__address_0 = '') OR (instr("o"."PostLogoutRedirectUris", @__address_0) > 0)
+2022-11-23 12:29:05.682 +01:00 [INF] The logout request was successfully validated.
+2022-11-23 12:29:05.684 +01:00 [INF] Executing endpoint 'OpeniddictServer.Controllers.AuthorizationController.LogoutPost (IdentityProvider)'
+2022-11-23 12:29:05.690 +01:00 [INF] Route matched with {action = "Logout", controller = "Authorization", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LogoutPost() on controller OpeniddictServer.Controllers.AuthorizationController (IdentityProvider).
+2022-11-23 12:29:05.693 +01:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2022-11-23 12:29:05.693 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2022-11-23 12:29:05.694 +01:00 [INF] AuthenticationScheme: Identity.TwoFactorUserId signed out.
+2022-11-23 12:29:05.695 +01:00 [INF] Executing SignOutResult with authentication schemes (["OpenIddict.Server.AspNetCore"]).
+2022-11-23 12:29:05.714 +01:00 [INF] The logout response was successfully returned to 'https://localhost:44360/signout-callback-oidc': Microsoft.AspNetCore.Http.DefaultHttpResponse.
+2022-11-23 12:29:05.722 +01:00 [INF] Executed action OpeniddictServer.Controllers.AuthorizationController.LogoutPost (IdentityProvider) in 31.8731ms
+2022-11-23 12:29:05.722 +01:00 [INF] Executed endpoint 'OpeniddictServer.Controllers.AuthorizationController.LogoutPost (IdentityProvider)'
+2022-11-23 12:29:05.722 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44318/connect/logout application/x-www-form-urlencoded 1657 - 302 - - 46.0394ms
+2022-11-23 12:29:05.762 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/connect/authorize?client_id=oidc-pkce-confidential&redirect_uri=https%3A%2F%2Flocalhost%3A44360%2Fsignin-oidc&response_type=code&scope=openid%20profile&code_challenge=D9sj-6CCyZk1btBp_FP1go2iUeGEPG5gBB-N42zJVHs&code_challenge_method=S256&response_mode=form_post&nonce=638047997457581051.YjY3MmE2OTMtMTc5OC00YWQ4LTlmY2ItNTZjNzgxNGM4OWQyNjM2NTc4M2QtZTVlZC00ODJmLWFiZGMtYjkwN2JlN2YyYmRh&state=CfDJ8FCl9LdozMBJiV4cQJICZ8F73AYxP2bdAHmscJ4f1GGmUnJpJ5uc898T4e3cSnC0PMlnRODvS2un25z6yKmz7k5n8_d6uQwpA_yL_7F0smiLY39KieCop4m8uhcCX-1SOa30LKLdpRjPN7khxtqwxXiaojLHH8UYS19OE3QKHJ1IEpkcofnKuCNaJbHBtPObA7neNGzRNcGkj45b6uQlvGPSj7R2tDyHqTtrkAWwH_7f-AUdSnFpNPyqKiYQsNM--Xs1-7BgIt3pU7RFsMjKLsTNCjZv7CFMzlE1A60tyjc93tX9XJ695WRGxpBD2IiAIhMcKr_mIqeS62TC5S8ECaDrEpiOcimwb20HJOOFX6RTahjue0NQgRNt3gcWI1QQBw&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.10.0.0 - -
+2022-11-23 12:29:05.763 +01:00 [INF] The request address matched a server endpoint: "Authorization".
+2022-11-23 12:29:05.764 +01:00 [INF] The authorization request was successfully extracted: {
+  "client_id": "oidc-pkce-confidential",
+  "redirect_uri": "https://localhost:44360/signin-oidc",
+  "response_type": "code",
+  "scope": "openid profile",
+  "code_challenge": "D9sj-6CCyZk1btBp_FP1go2iUeGEPG5gBB-N42zJVHs",
+  "code_challenge_method": "S256",
+  "response_mode": "form_post",
+  "nonce": "638047997457581051.YjY3MmE2OTMtMTc5OC00YWQ4LTlmY2ItNTZjNzgxNGM4OWQyNjM2NTc4M2QtZTVlZC00ODJmLWFiZGMtYjkwN2JlN2YyYmRh",
+  "state": "CfDJ8FCl9LdozMBJiV4cQJICZ8F73AYxP2bdAHmscJ4f1GGmUnJpJ5uc898T4e3cSnC0PMlnRODvS2un25z6yKmz7k5n8_d6uQwpA_yL_7F0smiLY39KieCop4m8uhcCX-1SOa30LKLdpRjPN7khxtqwxXiaojLHH8UYS19OE3QKHJ1IEpkcofnKuCNaJbHBtPObA7neNGzRNcGkj45b6uQlvGPSj7R2tDyHqTtrkAWwH_7f-AUdSnFpNPyqKiYQsNM--Xs1-7BgIt3pU7RFsMjKLsTNCjZv7CFMzlE1A60tyjc93tX9XJ695WRGxpBD2IiAIhMcKr_mIqeS62TC5S8ECaDrEpiOcimwb20HJOOFX6RTahjue0NQgRNt3gcWI1QQBw",
+  "x-client-SKU": "ID_NETSTANDARD2_0",
+  "x-client-ver": "6.10.0.0"
+}.
+2022-11-23 12:29:05.766 +01:00 [INF] Entity Framework Core 6.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.10' with options: None
+2022-11-23 12:29:05.767 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__identifier_0='?' (Size = 22)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."ClientId" = @__identifier_0
+LIMIT 1
+2022-11-23 12:29:05.774 +01:00 [INF] The authorization request was successfully validated.
+2022-11-23 12:29:05.775 +01:00 [INF] Executing endpoint 'OpeniddictServer.Controllers.AuthorizationController.Authorize (IdentityProvider)'
+2022-11-23 12:29:05.775 +01:00 [INF] Route matched with {action = "Authorize", controller = "Authorization", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authorize() on controller OpeniddictServer.Controllers.AuthorizationController (IdentityProvider).
+2022-11-23 12:29:05.776 +01:00 [INF] Executing ChallengeResult with authentication schemes (["Identity.Application"]).
+2022-11-23 12:29:05.776 +01:00 [INF] AuthenticationScheme: Identity.Application was challenged.
+2022-11-23 12:29:05.776 +01:00 [INF] Executed action OpeniddictServer.Controllers.AuthorizationController.Authorize (IdentityProvider) in 0.5229ms
+2022-11-23 12:29:05.776 +01:00 [INF] Executed endpoint 'OpeniddictServer.Controllers.AuthorizationController.Authorize (IdentityProvider)'
+2022-11-23 12:29:05.776 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/connect/authorize?client_id=oidc-pkce-confidential&redirect_uri=https%3A%2F%2Flocalhost%3A44360%2Fsignin-oidc&response_type=code&scope=openid%20profile&code_challenge=D9sj-6CCyZk1btBp_FP1go2iUeGEPG5gBB-N42zJVHs&code_challenge_method=S256&response_mode=form_post&nonce=638047997457581051.YjY3MmE2OTMtMTc5OC00YWQ4LTlmY2ItNTZjNzgxNGM4OWQyNjM2NTc4M2QtZTVlZC00ODJmLWFiZGMtYjkwN2JlN2YyYmRh&state=CfDJ8FCl9LdozMBJiV4cQJICZ8F73AYxP2bdAHmscJ4f1GGmUnJpJ5uc898T4e3cSnC0PMlnRODvS2un25z6yKmz7k5n8_d6uQwpA_yL_7F0smiLY39KieCop4m8uhcCX-1SOa30LKLdpRjPN7khxtqwxXiaojLHH8UYS19OE3QKHJ1IEpkcofnKuCNaJbHBtPObA7neNGzRNcGkj45b6uQlvGPSj7R2tDyHqTtrkAWwH_7f-AUdSnFpNPyqKiYQsNM--Xs1-7BgIt3pU7RFsMjKLsTNCjZv7CFMzlE1A60tyjc93tX9XJ695WRGxpBD2IiAIhMcKr_mIqeS62TC5S8ECaDrEpiOcimwb20HJOOFX6RTahjue0NQgRNt3gcWI1QQBw&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.10.0.0 - - - 302 - - 14.0857ms
+2022-11-23 12:29:05.781 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/Identity/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%3Fclient_id%3Doidc-pkce-confidential%26redirect_uri%3Dhttps%253A%252F%252Flocalhost%253A44360%252Fsignin-oidc%26response_type%3Dcode%26scope%3Dopenid%2520profile%26code_challenge%3DD9sj-6CCyZk1btBp_FP1go2iUeGEPG5gBB-N42zJVHs%26code_challenge_method%3DS256%26response_mode%3Dform_post%26nonce%3D638047997457581051.YjY3MmE2OTMtMTc5OC00YWQ4LTlmY2ItNTZjNzgxNGM4OWQyNjM2NTc4M2QtZTVlZC00ODJmLWFiZGMtYjkwN2JlN2YyYmRh%26state%3DCfDJ8FCl9LdozMBJiV4cQJICZ8F73AYxP2bdAHmscJ4f1GGmUnJpJ5uc898T4e3cSnC0PMlnRODvS2un25z6yKmz7k5n8_d6uQwpA_yL_7F0smiLY39KieCop4m8uhcCX-1SOa30LKLdpRjPN7khxtqwxXiaojLHH8UYS19OE3QKHJ1IEpkcofnKuCNaJbHBtPObA7neNGzRNcGkj45b6uQlvGPSj7R2tDyHqTtrkAWwH_7f-AUdSnFpNPyqKiYQsNM--Xs1-7BgIt3pU7RFsMjKLsTNCjZv7CFMzlE1A60tyjc93tX9XJ695WRGxpBD2IiAIhMcKr_mIqeS62TC5S8ECaDrEpiOcimwb20HJOOFX6RTahjue0NQgRNt3gcWI1QQBw%26x-client-SKU%3DID_NETSTANDARD2_0%26x-client-ver%3D6.10.0.0 - -
+2022-11-23 12:29:05.782 +01:00 [INF] Executing endpoint '/Account/Login'
+2022-11-23 12:29:05.783 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2022-11-23 12:29:05.784 +01:00 [INF] Executing handler method OpeniddictServer.Areas.Identity.Pages.Account.LoginModel.OnGetAsync - ModelState is "Valid"
+2022-11-23 12:29:05.785 +01:00 [INF] AuthenticationScheme: Identity.External signed out.
+2022-11-23 12:29:05.785 +01:00 [INF] Executed handler method OnGetAsync, returned result .
+2022-11-23 12:29:05.785 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2022-11-23 12:29:05.785 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2022-11-23 12:29:05.792 +01:00 [INF] Executed page /Account/Login in 9.2608ms
+2022-11-23 12:29:05.793 +01:00 [INF] Executed endpoint '/Account/Login'
+2022-11-23 12:29:05.801 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/Identity/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%3Fclient_id%3Doidc-pkce-confidential%26redirect_uri%3Dhttps%253A%252F%252Flocalhost%253A44360%252Fsignin-oidc%26response_type%3Dcode%26scope%3Dopenid%2520profile%26code_challenge%3DD9sj-6CCyZk1btBp_FP1go2iUeGEPG5gBB-N42zJVHs%26code_challenge_method%3DS256%26response_mode%3Dform_post%26nonce%3D638047997457581051.YjY3MmE2OTMtMTc5OC00YWQ4LTlmY2ItNTZjNzgxNGM4OWQyNjM2NTc4M2QtZTVlZC00ODJmLWFiZGMtYjkwN2JlN2YyYmRh%26state%3DCfDJ8FCl9LdozMBJiV4cQJICZ8F73AYxP2bdAHmscJ4f1GGmUnJpJ5uc898T4e3cSnC0PMlnRODvS2un25z6yKmz7k5n8_d6uQwpA_yL_7F0smiLY39KieCop4m8uhcCX-1SOa30LKLdpRjPN7khxtqwxXiaojLHH8UYS19OE3QKHJ1IEpkcofnKuCNaJbHBtPObA7neNGzRNcGkj45b6uQlvGPSj7R2tDyHqTtrkAWwH_7f-AUdSnFpNPyqKiYQsNM--Xs1-7BgIt3pU7RFsMjKLsTNCjZv7CFMzlE1A60tyjc93tX9XJ695WRGxpBD2IiAIhMcKr_mIqeS62TC5S8ECaDrEpiOcimwb20HJOOFX6RTahjue0NQgRNt3gcWI1QQBw%26x-client-SKU%3DID_NETSTANDARD2_0%26x-client-ver%3D6.10.0.0 - - - 200 - text/html;+charset=utf-8 19.6434ms
+2022-11-23 12:29:05.862 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2022-11-23 12:29:05.863 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 11950 application/javascript;+charset=utf-8 1.7158ms
+2022-11-23 12:30:09.163 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44318/Identity/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%3Fclient_id%3Doidc-pkce-confidential%26redirect_uri%3Dhttps%253A%252F%252Flocalhost%253A44360%252Fsignin-oidc%26response_type%3Dcode%26scope%3Dopenid%2520profile%26code_challenge%3DD9sj-6CCyZk1btBp_FP1go2iUeGEPG5gBB-N42zJVHs%26code_challenge_method%3DS256%26response_mode%3Dform_post%26nonce%3D638047997457581051.YjY3MmE2OTMtMTc5OC00YWQ4LTlmY2ItNTZjNzgxNGM4OWQyNjM2NTc4M2QtZTVlZC00ODJmLWFiZGMtYjkwN2JlN2YyYmRh%26state%3DCfDJ8FCl9LdozMBJiV4cQJICZ8F73AYxP2bdAHmscJ4f1GGmUnJpJ5uc898T4e3cSnC0PMlnRODvS2un25z6yKmz7k5n8_d6uQwpA_yL_7F0smiLY39KieCop4m8uhcCX-1SOa30LKLdpRjPN7khxtqwxXiaojLHH8UYS19OE3QKHJ1IEpkcofnKuCNaJbHBtPObA7neNGzRNcGkj45b6uQlvGPSj7R2tDyHqTtrkAWwH_7f-AUdSnFpNPyqKiYQsNM--Xs1-7BgIt3pU7RFsMjKLsTNCjZv7CFMzlE1A60tyjc93tX9XJ695WRGxpBD2IiAIhMcKr_mIqeS62TC5S8ECaDrEpiOcimwb20HJOOFX6RTahjue0NQgRNt3gcWI1QQBw%26x-client-SKU%3DID_NETSTANDARD2_0%26x-client-ver%3D6.10.0.0 application/x-www-form-urlencoded 256
+2022-11-23 12:30:09.164 +01:00 [INF] CORS policy execution failed.
+2022-11-23 12:30:09.164 +01:00 [INF] Request origin https://localhost:44318 does not have permission to access the resource.
+2022-11-23 12:30:09.164 +01:00 [INF] Executing endpoint '/Account/Login'
+2022-11-23 12:30:09.164 +01:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2022-11-23 12:30:09.165 +01:00 [INF] Executing handler method OpeniddictServer.Areas.Identity.Pages.Account.LoginModel.OnPostAsync - ModelState is "Valid"
+2022-11-23 12:30:09.166 +01:00 [INF] Entity Framework Core 6.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.10' with options: None
+2022-11-23 12:30:09.167 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 10)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2022-11-23 12:30:09.187 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__user_Id_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ClaimType", "a"."ClaimValue", "a"."UserId"
+FROM "AspNetUserClaims" AS "a"
+WHERE "a"."UserId" = @__user_Id_0
+2022-11-23 12:30:09.188 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a0"."Name"
+FROM "AspNetUserRoles" AS "a"
+INNER JOIN "AspNetRoles" AS "a0" ON "a"."RoleId" = "a0"."Id"
+WHERE "a"."UserId" = @__userId_0
+2022-11-23 12:30:09.189 +01:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2022-11-23 12:30:09.189 +01:00 [INF] User logged in.
+2022-11-23 12:30:09.189 +01:00 [INF] Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2022-11-23 12:30:09.190 +01:00 [INF] Executing LocalRedirectResult, redirecting to /connect/authorize?client_id=oidc-pkce-confidential&redirect_uri=https%3A%2F%2Flocalhost%3A44360%2Fsignin-oidc&response_type=code&scope=openid%20profile&code_challenge=D9sj-6CCyZk1btBp_FP1go2iUeGEPG5gBB-N42zJVHs&code_challenge_method=S256&response_mode=form_post&nonce=638047997457581051.YjY3MmE2OTMtMTc5OC00YWQ4LTlmY2ItNTZjNzgxNGM4OWQyNjM2NTc4M2QtZTVlZC00ODJmLWFiZGMtYjkwN2JlN2YyYmRh&state=CfDJ8FCl9LdozMBJiV4cQJICZ8F73AYxP2bdAHmscJ4f1GGmUnJpJ5uc898T4e3cSnC0PMlnRODvS2un25z6yKmz7k5n8_d6uQwpA_yL_7F0smiLY39KieCop4m8uhcCX-1SOa30LKLdpRjPN7khxtqwxXiaojLHH8UYS19OE3QKHJ1IEpkcofnKuCNaJbHBtPObA7neNGzRNcGkj45b6uQlvGPSj7R2tDyHqTtrkAWwH_7f-AUdSnFpNPyqKiYQsNM--Xs1-7BgIt3pU7RFsMjKLsTNCjZv7CFMzlE1A60tyjc93tX9XJ695WRGxpBD2IiAIhMcKr_mIqeS62TC5S8ECaDrEpiOcimwb20HJOOFX6RTahjue0NQgRNt3gcWI1QQBw&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.10.0.0.
+2022-11-23 12:30:09.190 +01:00 [INF] Executed page /Account/Login in 25.5435ms
+2022-11-23 12:30:09.190 +01:00 [INF] Executed endpoint '/Account/Login'
+2022-11-23 12:30:09.192 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44318/Identity/Account/Login?ReturnUrl=%2Fconnect%2Fauthorize%3Fclient_id%3Doidc-pkce-confidential%26redirect_uri%3Dhttps%253A%252F%252Flocalhost%253A44360%252Fsignin-oidc%26response_type%3Dcode%26scope%3Dopenid%2520profile%26code_challenge%3DD9sj-6CCyZk1btBp_FP1go2iUeGEPG5gBB-N42zJVHs%26code_challenge_method%3DS256%26response_mode%3Dform_post%26nonce%3D638047997457581051.YjY3MmE2OTMtMTc5OC00YWQ4LTlmY2ItNTZjNzgxNGM4OWQyNjM2NTc4M2QtZTVlZC00ODJmLWFiZGMtYjkwN2JlN2YyYmRh%26state%3DCfDJ8FCl9LdozMBJiV4cQJICZ8F73AYxP2bdAHmscJ4f1GGmUnJpJ5uc898T4e3cSnC0PMlnRODvS2un25z6yKmz7k5n8_d6uQwpA_yL_7F0smiLY39KieCop4m8uhcCX-1SOa30LKLdpRjPN7khxtqwxXiaojLHH8UYS19OE3QKHJ1IEpkcofnKuCNaJbHBtPObA7neNGzRNcGkj45b6uQlvGPSj7R2tDyHqTtrkAWwH_7f-AUdSnFpNPyqKiYQsNM--Xs1-7BgIt3pU7RFsMjKLsTNCjZv7CFMzlE1A60tyjc93tX9XJ695WRGxpBD2IiAIhMcKr_mIqeS62TC5S8ECaDrEpiOcimwb20HJOOFX6RTahjue0NQgRNt3gcWI1QQBw%26x-client-SKU%3DID_NETSTANDARD2_0%26x-client-ver%3D6.10.0.0 application/x-www-form-urlencoded 256 - 302 - - 29.6617ms
+2022-11-23 12:30:09.197 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/connect/authorize?client_id=oidc-pkce-confidential&redirect_uri=https%3A%2F%2Flocalhost%3A44360%2Fsignin-oidc&response_type=code&scope=openid%20profile&code_challenge=D9sj-6CCyZk1btBp_FP1go2iUeGEPG5gBB-N42zJVHs&code_challenge_method=S256&response_mode=form_post&nonce=638047997457581051.YjY3MmE2OTMtMTc5OC00YWQ4LTlmY2ItNTZjNzgxNGM4OWQyNjM2NTc4M2QtZTVlZC00ODJmLWFiZGMtYjkwN2JlN2YyYmRh&state=CfDJ8FCl9LdozMBJiV4cQJICZ8F73AYxP2bdAHmscJ4f1GGmUnJpJ5uc898T4e3cSnC0PMlnRODvS2un25z6yKmz7k5n8_d6uQwpA_yL_7F0smiLY39KieCop4m8uhcCX-1SOa30LKLdpRjPN7khxtqwxXiaojLHH8UYS19OE3QKHJ1IEpkcofnKuCNaJbHBtPObA7neNGzRNcGkj45b6uQlvGPSj7R2tDyHqTtrkAWwH_7f-AUdSnFpNPyqKiYQsNM--Xs1-7BgIt3pU7RFsMjKLsTNCjZv7CFMzlE1A60tyjc93tX9XJ695WRGxpBD2IiAIhMcKr_mIqeS62TC5S8ECaDrEpiOcimwb20HJOOFX6RTahjue0NQgRNt3gcWI1QQBw&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.10.0.0 - -
+2022-11-23 12:30:09.210 +01:00 [INF] The request address matched a server endpoint: "Authorization".
+2022-11-23 12:30:09.210 +01:00 [INF] The authorization request was successfully extracted: {
+  "client_id": "oidc-pkce-confidential",
+  "redirect_uri": "https://localhost:44360/signin-oidc",
+  "response_type": "code",
+  "scope": "openid profile",
+  "code_challenge": "D9sj-6CCyZk1btBp_FP1go2iUeGEPG5gBB-N42zJVHs",
+  "code_challenge_method": "S256",
+  "response_mode": "form_post",
+  "nonce": "638047997457581051.YjY3MmE2OTMtMTc5OC00YWQ4LTlmY2ItNTZjNzgxNGM4OWQyNjM2NTc4M2QtZTVlZC00ODJmLWFiZGMtYjkwN2JlN2YyYmRh",
+  "state": "CfDJ8FCl9LdozMBJiV4cQJICZ8F73AYxP2bdAHmscJ4f1GGmUnJpJ5uc898T4e3cSnC0PMlnRODvS2un25z6yKmz7k5n8_d6uQwpA_yL_7F0smiLY39KieCop4m8uhcCX-1SOa30LKLdpRjPN7khxtqwxXiaojLHH8UYS19OE3QKHJ1IEpkcofnKuCNaJbHBtPObA7neNGzRNcGkj45b6uQlvGPSj7R2tDyHqTtrkAWwH_7f-AUdSnFpNPyqKiYQsNM--Xs1-7BgIt3pU7RFsMjKLsTNCjZv7CFMzlE1A60tyjc93tX9XJ695WRGxpBD2IiAIhMcKr_mIqeS62TC5S8ECaDrEpiOcimwb20HJOOFX6RTahjue0NQgRNt3gcWI1QQBw",
+  "x-client-SKU": "ID_NETSTANDARD2_0",
+  "x-client-ver": "6.10.0.0"
+}.
+2022-11-23 12:30:09.210 +01:00 [INF] Entity Framework Core 6.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.10' with options: None
+2022-11-23 12:30:09.211 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__identifier_0='?' (Size = 22)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."ClientId" = @__identifier_0
+LIMIT 1
+2022-11-23 12:30:09.211 +01:00 [INF] The authorization request was successfully validated.
+2022-11-23 12:30:09.212 +01:00 [INF] Executing endpoint 'OpeniddictServer.Controllers.AuthorizationController.Authorize (IdentityProvider)'
+2022-11-23 12:30:09.212 +01:00 [INF] Route matched with {action = "Authorize", controller = "Authorization", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authorize() on controller OpeniddictServer.Controllers.AuthorizationController (IdentityProvider).
+2022-11-23 12:30:09.213 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."Id" = @__p_0
+LIMIT 1
+2022-11-23 12:30:09.215 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__subject_0='?' (Size = 36), @__status_1='?' (Size = 5), @__type_2='?' (Size = 9), @__key_3='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ApplicationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."Properties", "o"."Scopes", "o"."Status", "o"."Subject", "o"."Type", "o0"."Id", "o0"."ClientId", "o0"."ClientSecret", "o0"."ConcurrencyToken", "o0"."ConsentType", "o0"."DisplayName", "o0"."DisplayNames", "o0"."Permissions", "o0"."PostLogoutRedirectUris", "o0"."Properties", "o0"."RedirectUris", "o0"."Requirements", "o0"."Type"
+FROM "OpenIddictAuthorizations" AS "o"
+LEFT JOIN "OpenIddictApplications" AS "o0" ON "o"."ApplicationId" = "o0"."Id"
+INNER JOIN "OpenIddictApplications" AS "o1" ON "o0"."Id" = "o1"."Id"
+WHERE ((("o"."Subject" = @__subject_0) AND ("o"."Status" = @__status_1)) AND ("o"."Type" = @__type_2)) AND ("o1"."Id" = @__key_3)
+2022-11-23 12:30:09.215 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__user_Id_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ClaimType", "a"."ClaimValue", "a"."UserId"
+FROM "AspNetUserClaims" AS "a"
+WHERE "a"."UserId" = @__user_Id_0
+2022-11-23 12:30:09.216 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a0"."Name"
+FROM "AspNetUserRoles" AS "a"
+INNER JOIN "AspNetRoles" AS "a0" ON "a"."RoleId" = "a0"."Id"
+WHERE "a"."UserId" = @__userId_0
+2022-11-23 12:30:09.217 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ConcurrencyToken", "o"."Description", "o"."Descriptions", "o"."DisplayName", "o"."DisplayNames", "o"."Name", "o"."Properties", "o"."Resources"
+FROM "OpenIddictScopes" AS "o"
+WHERE "o"."Name" IN ('openid', 'profile')
+2022-11-23 12:30:09.218 +01:00 [INF] Executing SignInResult with authentication scheme (OpenIddict.Server.AspNetCore) and the following principal: System.Security.Claims.ClaimsPrincipal.
+2022-11-23 12:30:09.221 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."Id" = @__key_0
+LIMIT 1
+2022-11-23 12:30:09.222 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ApplicationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."Properties", "o"."Scopes", "o"."Status", "o"."Subject", "o"."Type"
+FROM "OpenIddictAuthorizations" AS "o"
+WHERE "o"."Id" = @__key_0
+LIMIT 1
+2022-11-23 12:30:09.235 +01:00 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (Size = 36), @p2='?' (Size = 36), @p3='?' (Size = 36), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?', @p7='?', @p8='?' (DbType = DateTime), @p9='?', @p10='?' (Size = 5), @p11='?' (Size = 36), @p12='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "OpenIddictTokens" ("Id", "ApplicationId", "AuthorizationId", "ConcurrencyToken", "CreationDate", "ExpirationDate", "Payload", "Properties", "RedemptionDate", "ReferenceId", "Status", "Subject", "Type")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2022-11-23 12:30:09.256 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."Id" = @__key_0
+LIMIT 1
+2022-11-23 12:30:09.256 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ApplicationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."Properties", "o"."Scopes", "o"."Status", "o"."Subject", "o"."Type"
+FROM "OpenIddictAuthorizations" AS "o"
+WHERE "o"."Id" = @__key_0
+LIMIT 1
+2022-11-23 12:30:09.257 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__identifier_0='?' (Size = 44)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ApplicationId", "o"."AuthorizationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."ExpirationDate", "o"."Payload", "o"."Properties", "o"."RedemptionDate", "o"."ReferenceId", "o"."Status", "o"."Subject", "o"."Type", "o0"."Id", "o0"."ClientId", "o0"."ClientSecret", "o0"."ConcurrencyToken", "o0"."ConsentType", "o0"."DisplayName", "o0"."DisplayNames", "o0"."Permissions", "o0"."PostLogoutRedirectUris", "o0"."Properties", "o0"."RedirectUris", "o0"."Requirements", "o0"."Type", "o1"."Id", "o1"."ApplicationId", "o1"."ConcurrencyToken", "o1"."CreationDate", "o1"."Properties", "o1"."Scopes", "o1"."Status", "o1"."Subject", "o1"."Type"
+FROM "OpenIddictTokens" AS "o"
+LEFT JOIN "OpenIddictApplications" AS "o0" ON "o"."ApplicationId" = "o0"."Id"
+LEFT JOIN "OpenIddictAuthorizations" AS "o1" ON "o"."AuthorizationId" = "o1"."Id"
+WHERE "o"."ReferenceId" = @__identifier_0
+LIMIT 1
+2022-11-23 12:30:09.259 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@p12='?' (Size = 36), @p0='?' (Size = 36), @p1='?' (Size = 36), @p2='?' (Size = 36), @p13='?' (Size = 36), @p3='?' (DbType = DateTime), @p4='?' (DbType = DateTime), @p5='?' (Size = 2667), @p6='?', @p7='?' (DbType = DateTime), @p8='?' (Size = 44), @p9='?' (Size = 5), @p10='?' (Size = 36), @p11='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "OpenIddictTokens" SET "ApplicationId" = @p0, "AuthorizationId" = @p1, "ConcurrencyToken" = @p2, "CreationDate" = @p3, "ExpirationDate" = @p4, "Payload" = @p5, "Properties" = @p6, "RedemptionDate" = @p7, "ReferenceId" = @p8, "Status" = @p9, "Subject" = @p10, "Type" = @p11
+WHERE "Id" = @p12 AND "ConcurrencyToken" = @p13;
+SELECT changes();
+2022-11-23 12:30:09.264 +01:00 [INF] The authorization response was successfully returned to 'https://localhost:44360/signin-oidc' using the form post response mode: {
+  "code": "[redacted]",
+  "state": "CfDJ8FCl9LdozMBJiV4cQJICZ8F73AYxP2bdAHmscJ4f1GGmUnJpJ5uc898T4e3cSnC0PMlnRODvS2un25z6yKmz7k5n8_d6uQwpA_yL_7F0smiLY39KieCop4m8uhcCX-1SOa30LKLdpRjPN7khxtqwxXiaojLHH8UYS19OE3QKHJ1IEpkcofnKuCNaJbHBtPObA7neNGzRNcGkj45b6uQlvGPSj7R2tDyHqTtrkAWwH_7f-AUdSnFpNPyqKiYQsNM--Xs1-7BgIt3pU7RFsMjKLsTNCjZv7CFMzlE1A60tyjc93tX9XJ695WRGxpBD2IiAIhMcKr_mIqeS62TC5S8ECaDrEpiOcimwb20HJOOFX6RTahjue0NQgRNt3gcWI1QQBw"
+}.
+2022-11-23 12:30:09.268 +01:00 [INF] Executed action OpeniddictServer.Controllers.AuthorizationController.Authorize (IdentityProvider) in 56.0564ms
+2022-11-23 12:30:09.268 +01:00 [INF] Executed endpoint 'OpeniddictServer.Controllers.AuthorizationController.Authorize (IdentityProvider)'
+2022-11-23 12:30:09.269 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/connect/authorize?client_id=oidc-pkce-confidential&redirect_uri=https%3A%2F%2Flocalhost%3A44360%2Fsignin-oidc&response_type=code&scope=openid%20profile&code_challenge=D9sj-6CCyZk1btBp_FP1go2iUeGEPG5gBB-N42zJVHs&code_challenge_method=S256&response_mode=form_post&nonce=638047997457581051.YjY3MmE2OTMtMTc5OC00YWQ4LTlmY2ItNTZjNzgxNGM4OWQyNjM2NTc4M2QtZTVlZC00ODJmLWFiZGMtYjkwN2JlN2YyYmRh&state=CfDJ8FCl9LdozMBJiV4cQJICZ8F73AYxP2bdAHmscJ4f1GGmUnJpJ5uc898T4e3cSnC0PMlnRODvS2un25z6yKmz7k5n8_d6uQwpA_yL_7F0smiLY39KieCop4m8uhcCX-1SOa30LKLdpRjPN7khxtqwxXiaojLHH8UYS19OE3QKHJ1IEpkcofnKuCNaJbHBtPObA7neNGzRNcGkj45b6uQlvGPSj7R2tDyHqTtrkAWwH_7f-AUdSnFpNPyqKiYQsNM--Xs1-7BgIt3pU7RFsMjKLsTNCjZv7CFMzlE1A60tyjc93tX9XJ695WRGxpBD2IiAIhMcKr_mIqeS62TC5S8ECaDrEpiOcimwb20HJOOFX6RTahjue0NQgRNt3gcWI1QQBw&x-client-SKU=ID_NETSTANDARD2_0&x-client-ver=6.10.0.0 - - - 200 - text/html;charset=UTF-8 71.8987ms
+2022-11-23 12:30:09.327 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - -
+2022-11-23 12:30:09.329 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44318/_framework/aspnetcore-browser-refresh.js - - - 200 11950 application/javascript;+charset=utf-8 1.5718ms
+2022-11-23 12:30:09.460 +01:00 [INF] Request starting HTTP/1.1 POST https://localhost:44318/connect/token application/x-www-form-urlencoded 272
+2022-11-23 12:30:09.460 +01:00 [INF] The request address matched a server endpoint: "Token".
+2022-11-23 12:30:09.461 +01:00 [INF] The token request was successfully extracted: {
+  "client_id": "oidc-pkce-confidential",
+  "client_secret": "[redacted]",
+  "code": "[redacted]",
+  "grant_type": "authorization_code",
+  "redirect_uri": "https://localhost:44360/signin-oidc",
+  "code_verifier": "-WRYJSqmpgTcampr5nSY-NvGD8SP0A9ptFcx4CVMHK0"
+}.
+2022-11-23 12:30:09.462 +01:00 [INF] Entity Framework Core 6.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.10' with options: None
+2022-11-23 12:30:09.464 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__identifier_0='?' (Size = 22)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."ClientId" = @__identifier_0
+LIMIT 1
+2022-11-23 12:30:09.489 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__identifier_0='?' (Size = 44)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ApplicationId", "o"."AuthorizationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."ExpirationDate", "o"."Payload", "o"."Properties", "o"."RedemptionDate", "o"."ReferenceId", "o"."Status", "o"."Subject", "o"."Type", "o0"."Id", "o0"."ClientId", "o0"."ClientSecret", "o0"."ConcurrencyToken", "o0"."ConsentType", "o0"."DisplayName", "o0"."DisplayNames", "o0"."Permissions", "o0"."PostLogoutRedirectUris", "o0"."Properties", "o0"."RedirectUris", "o0"."Requirements", "o0"."Type", "o1"."Id", "o1"."ApplicationId", "o1"."ConcurrencyToken", "o1"."CreationDate", "o1"."Properties", "o1"."Scopes", "o1"."Status", "o1"."Subject", "o1"."Type"
+FROM "OpenIddictTokens" AS "o"
+LEFT JOIN "OpenIddictApplications" AS "o0" ON "o"."ApplicationId" = "o0"."Id"
+LEFT JOIN "OpenIddictAuthorizations" AS "o1" ON "o"."AuthorizationId" = "o1"."Id"
+WHERE "o"."ReferenceId" = @__identifier_0
+LIMIT 1
+2022-11-23 12:30:09.494 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ApplicationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."Properties", "o"."Scopes", "o"."Status", "o"."Subject", "o"."Type", "o0"."Id", "o0"."ClientId", "o0"."ClientSecret", "o0"."ConcurrencyToken", "o0"."ConsentType", "o0"."DisplayName", "o0"."DisplayNames", "o0"."Permissions", "o0"."PostLogoutRedirectUris", "o0"."Properties", "o0"."RedirectUris", "o0"."Requirements", "o0"."Type"
+FROM "OpenIddictAuthorizations" AS "o"
+LEFT JOIN "OpenIddictApplications" AS "o0" ON "o"."ApplicationId" = "o0"."Id"
+WHERE "o"."Id" = @__key_0
+LIMIT 1
+2022-11-23 12:30:09.495 +01:00 [INF] The token request was successfully validated.
+2022-11-23 12:30:09.495 +01:00 [INF] Executing endpoint 'OpeniddictServer.Controllers.AuthorizationController.Exchange (IdentityProvider)'
+2022-11-23 12:30:09.495 +01:00 [INF] Route matched with {action = "Exchange", controller = "Authorization", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Exchange() on controller OpeniddictServer.Controllers.AuthorizationController (IdentityProvider).
+2022-11-23 12:30:09.497 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."Id" = @__p_0
+LIMIT 1
+2022-11-23 12:30:09.497 +01:00 [INF] Executing SignInResult with authentication scheme (OpenIddict.Server.AspNetCore) and the following principal: System.Security.Claims.ClaimsPrincipal.
+2022-11-23 12:30:09.498 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__identifier_0='?' (Size = 44)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ApplicationId", "o"."AuthorizationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."ExpirationDate", "o"."Payload", "o"."Properties", "o"."RedemptionDate", "o"."ReferenceId", "o"."Status", "o"."Subject", "o"."Type", "o0"."Id", "o0"."ClientId", "o0"."ClientSecret", "o0"."ConcurrencyToken", "o0"."ConsentType", "o0"."DisplayName", "o0"."DisplayNames", "o0"."Permissions", "o0"."PostLogoutRedirectUris", "o0"."Properties", "o0"."RedirectUris", "o0"."Requirements", "o0"."Type", "o1"."Id", "o1"."ApplicationId", "o1"."ConcurrencyToken", "o1"."CreationDate", "o1"."Properties", "o1"."Scopes", "o1"."Status", "o1"."Subject", "o1"."Type"
+FROM "OpenIddictTokens" AS "o"
+LEFT JOIN "OpenIddictApplications" AS "o0" ON "o"."ApplicationId" = "o0"."Id"
+LEFT JOIN "OpenIddictAuthorizations" AS "o1" ON "o"."AuthorizationId" = "o1"."Id"
+WHERE "o"."ReferenceId" = @__identifier_0
+LIMIT 1
+2022-11-23 12:30:09.514 +01:00 [INF] Executed DbCommand (15ms) [Parameters=[@p12='?' (Size = 36), @p0='?' (Size = 36), @p1='?' (Size = 36), @p2='?' (Size = 36), @p13='?' (Size = 36), @p3='?' (DbType = DateTime), @p4='?' (DbType = DateTime), @p5='?' (Size = 2667), @p6='?', @p7='?' (DbType = DateTime), @p8='?' (Size = 44), @p9='?' (Size = 8), @p10='?' (Size = 36), @p11='?' (Size = 18)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "OpenIddictTokens" SET "ApplicationId" = @p0, "AuthorizationId" = @p1, "ConcurrencyToken" = @p2, "CreationDate" = @p3, "ExpirationDate" = @p4, "Payload" = @p5, "Properties" = @p6, "RedemptionDate" = @p7, "ReferenceId" = @p8, "Status" = @p9, "Subject" = @p10, "Type" = @p11
+WHERE "Id" = @p12 AND "ConcurrencyToken" = @p13;
+SELECT changes();
+2022-11-23 12:30:09.518 +01:00 [INF] The token '945b406a-3f3a-4590-b9be-14f8499e36d9' was successfully marked as redeemed.
+2022-11-23 12:30:09.519 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."Id" = @__key_0
+LIMIT 1
+2022-11-23 12:30:09.520 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ApplicationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."Properties", "o"."Scopes", "o"."Status", "o"."Subject", "o"."Type"
+FROM "OpenIddictAuthorizations" AS "o"
+WHERE "o"."Id" = @__key_0
+LIMIT 1
+2022-11-23 12:30:09.524 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (Size = 36), @p2='?' (Size = 36), @p3='?' (Size = 36), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?', @p7='?', @p8='?' (DbType = DateTime), @p9='?', @p10='?' (Size = 5), @p11='?' (Size = 36), @p12='?' (Size = 12)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "OpenIddictTokens" ("Id", "ApplicationId", "AuthorizationId", "ConcurrencyToken", "CreationDate", "ExpirationDate", "Payload", "Properties", "RedemptionDate", "ReferenceId", "Status", "Subject", "Type")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2022-11-23 12:30:09.532 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."Id" = @__key_0
+LIMIT 1
+2022-11-23 12:30:09.533 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ApplicationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."Properties", "o"."Scopes", "o"."Status", "o"."Subject", "o"."Type"
+FROM "OpenIddictAuthorizations" AS "o"
+WHERE "o"."Id" = @__key_0
+LIMIT 1
+2022-11-23 12:30:09.535 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (Size = 36), @p2='?' (Size = 36), @p3='?' (Size = 36), @p4='?' (DbType = DateTime), @p5='?' (DbType = DateTime), @p6='?', @p7='?', @p8='?' (DbType = DateTime), @p9='?', @p10='?' (Size = 5), @p11='?' (Size = 36), @p12='?' (Size = 8)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "OpenIddictTokens" ("Id", "ApplicationId", "AuthorizationId", "ConcurrencyToken", "CreationDate", "ExpirationDate", "Payload", "Properties", "RedemptionDate", "ReferenceId", "Status", "Subject", "Type")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2022-11-23 12:30:09.543 +01:00 [INF] The response was successfully returned as a JSON document: {
+  "access_token": "[redacted]",
+  "token_type": "Bearer",
+  "expires_in": 3599,
+  "scope": "openid profile",
+  "id_token": "[redacted]"
+}.
+2022-11-23 12:30:09.543 +01:00 [INF] Executed action OpeniddictServer.Controllers.AuthorizationController.Exchange (IdentityProvider) in 47.5387ms
+2022-11-23 12:30:09.543 +01:00 [INF] Executed endpoint 'OpeniddictServer.Controllers.AuthorizationController.Exchange (IdentityProvider)'
+2022-11-23 12:30:09.543 +01:00 [INF] Request finished HTTP/1.1 POST https://localhost:44318/connect/token application/x-www-form-urlencoded 272 - 200 2197 application/json;charset=UTF-8 83.3623ms
+2022-11-23 12:30:09.552 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:44318/connect/userinfo - -
+2022-11-23 12:30:09.552 +01:00 [INF] The request address matched a server endpoint: "Userinfo".
+2022-11-23 12:30:09.553 +01:00 [INF] The userinfo request was successfully extracted: {
+  "access_token": "[redacted]"
+}.
+2022-11-23 12:30:09.556 +01:00 [INF] Entity Framework Core 6.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:6.0.10' with options: None
+2022-11-23 12:30:09.556 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ApplicationId", "o"."AuthorizationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."ExpirationDate", "o"."Payload", "o"."Properties", "o"."RedemptionDate", "o"."ReferenceId", "o"."Status", "o"."Subject", "o"."Type", "o0"."Id", "o0"."ClientId", "o0"."ClientSecret", "o0"."ConcurrencyToken", "o0"."ConsentType", "o0"."DisplayName", "o0"."DisplayNames", "o0"."Permissions", "o0"."PostLogoutRedirectUris", "o0"."Properties", "o0"."RedirectUris", "o0"."Requirements", "o0"."Type", "o1"."Id", "o1"."ApplicationId", "o1"."ConcurrencyToken", "o1"."CreationDate", "o1"."Properties", "o1"."Scopes", "o1"."Status", "o1"."Subject", "o1"."Type"
+FROM "OpenIddictTokens" AS "o"
+LEFT JOIN "OpenIddictApplications" AS "o0" ON "o"."ApplicationId" = "o0"."Id"
+LEFT JOIN "OpenIddictAuthorizations" AS "o1" ON "o"."AuthorizationId" = "o1"."Id"
+WHERE "o"."Id" = @__key_0
+LIMIT 1
+2022-11-23 12:30:09.557 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__key_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ApplicationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."Properties", "o"."Scopes", "o"."Status", "o"."Subject", "o"."Type", "o0"."Id", "o0"."ClientId", "o0"."ClientSecret", "o0"."ConcurrencyToken", "o0"."ConsentType", "o0"."DisplayName", "o0"."DisplayNames", "o0"."Permissions", "o0"."PostLogoutRedirectUris", "o0"."Properties", "o0"."RedirectUris", "o0"."Requirements", "o0"."Type"
+FROM "OpenIddictAuthorizations" AS "o"
+LEFT JOIN "OpenIddictApplications" AS "o0" ON "o"."ApplicationId" = "o0"."Id"
+WHERE "o"."Id" = @__key_0
+LIMIT 1
+2022-11-23 12:30:09.558 +01:00 [INF] The userinfo request was successfully validated.
+2022-11-23 12:30:09.558 +01:00 [INF] Executing endpoint 'OpeniddictServer.Controllers.UserinfoController.Userinfo (IdentityProvider)'
+2022-11-23 12:30:09.559 +01:00 [INF] Route matched with {action = "Userinfo", controller = "Userinfo", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Userinfo() on controller OpeniddictServer.Controllers.UserinfoController (IdentityProvider).
+2022-11-23 12:30:09.560 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."Id" = @__p_0
+LIMIT 1
+2022-11-23 12:30:09.560 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Object, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2022-11-23 12:30:09.561 +01:00 [INF] Executed action OpeniddictServer.Controllers.UserinfoController.Userinfo (IdentityProvider) in 2.1232ms
+2022-11-23 12:30:09.561 +01:00 [INF] Executed endpoint 'OpeniddictServer.Controllers.UserinfoController.Userinfo (IdentityProvider)'
+2022-11-23 12:30:09.561 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:44318/connect/userinfo - - - 200 - application/json;+charset=utf-8 9.0952ms

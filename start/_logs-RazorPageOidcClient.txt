@@ -1,0 +1,194 @@
+2022-11-23 12:04:47.551 +01:00 [INF] User profile is available. Using 'C:\Users\jeanbaptiste.castill\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-23 12:04:48.121 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-23 12:04:48.121 +01:00 [INF] Hosting environment: Development
+2022-11-23 12:04:48.121 +01:00 [INF] Content root path: C:\Repos\exercises-security-workshop\3-OpenIDConnect-OAuth2-flows\start\RazorPageOidcClient
+2022-11-23 12:04:48.182 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/ - -
+2022-11-23 12:04:48.295 +01:00 [INF] Executing endpoint '/Index'
+2022-11-23 12:04:48.413 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2022-11-23 12:04:48.434 +01:00 [INF] Executing handler method RazorPageOidcClient.Pages.IndexModel.OnGet - ModelState is "Valid"
+2022-11-23 12:04:48.445 +01:00 [INF] Executed handler method OnGet, returned result .
+2022-11-23 12:04:48.453 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2022-11-23 12:04:48.454 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2022-11-23 12:04:48.909 +01:00 [INF] Executed page /Index in 486.4342ms
+2022-11-23 12:04:48.912 +01:00 [INF] Executed endpoint '/Index'
+2022-11-23 12:04:49.063 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/css/site.css - -
+2022-11-23 12:04:49.063 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/lib/bootstrap/dist/css/bootstrap.min.css - -
+2022-11-23 12:04:49.069 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/ - - - 200 - text/html;+charset=utf-8 894.3604ms
+2022-11-23 12:04:49.208 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/lib/bootstrap/dist/js/bootstrap.bundle.min.js - -
+2022-11-23 12:04:49.226 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/js/site.js?v=dLGP40S79Xnx6GqUthRF6NWvjvhQ1nOvdVSwaNcgG18 - -
+2022-11-23 12:04:49.240 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/_framework/aspnetcore-browser-refresh.js - -
+2022-11-23 12:04:49.243 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/lib/jquery/dist/jquery.min.js - -
+2022-11-23 12:04:49.268 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/_framework/aspnetcore-browser-refresh.js - - - 200 11953 application/javascript;+charset=utf-8 33.3844ms
+2022-11-23 12:04:49.270 +01:00 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Repos\exercises-security-workshop\3-OpenIDConnect-OAuth2-flows\start\RazorPageOidcClient\wwwroot\js\site.js'
+2022-11-23 12:04:49.270 +01:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Repos\exercises-security-workshop\3-OpenIDConnect-OAuth2-flows\start\RazorPageOidcClient\wwwroot\css\site.css'
+2022-11-23 12:04:49.270 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Repos\exercises-security-workshop\3-OpenIDConnect-OAuth2-flows\start\RazorPageOidcClient\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2022-11-23 12:04:49.271 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/js/site.js?v=dLGP40S79Xnx6GqUthRF6NWvjvhQ1nOvdVSwaNcgG18 - - - 200 230 application/javascript 44.5056ms
+2022-11-23 12:04:49.271 +01:00 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Repos\exercises-security-workshop\3-OpenIDConnect-OAuth2-flows\start\RazorPageOidcClient\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2022-11-23 12:04:49.270 +01:00 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Repos\exercises-security-workshop\3-OpenIDConnect-OAuth2-flows\start\RazorPageOidcClient\wwwroot\lib\jquery\dist\jquery.min.js'
+2022-11-23 12:04:49.271 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/css/site.css - - - 200 1417 text/css 207.5981ms
+2022-11-23 12:04:49.292 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/lib/bootstrap/dist/js/bootstrap.bundle.min.js - - - 200 78641 application/javascript 83.8396ms
+2022-11-23 12:04:49.292 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/lib/jquery/dist/jquery.min.js - - - 200 86929 application/javascript 50.2006ms
+2022-11-23 12:04:49.292 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/lib/bootstrap/dist/css/bootstrap.min.css - - - 200 155764 text/css 228.5232ms
+2022-11-23 12:04:49.531 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/favicon.ico - -
+2022-11-23 12:04:49.534 +01:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Repos\exercises-security-workshop\3-OpenIDConnect-OAuth2-flows\start\RazorPageOidcClient\wwwroot\favicon.ico'
+2022-11-23 12:04:49.535 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/favicon.ico - - - 200 32038 image/x-icon 3.2701ms
+2022-11-23 12:04:59.732 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/ - -
+2022-11-23 12:04:59.736 +01:00 [INF] Executing endpoint '/Index'
+2022-11-23 12:04:59.736 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2022-11-23 12:04:59.737 +01:00 [INF] Executing handler method RazorPageOidcClient.Pages.IndexModel.OnGet - ModelState is "Valid"
+2022-11-23 12:04:59.737 +01:00 [INF] Executed handler method OnGet, returned result .
+2022-11-23 12:04:59.737 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2022-11-23 12:04:59.737 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2022-11-23 12:04:59.753 +01:00 [INF] Executed page /Index in 16.6717ms
+2022-11-23 12:04:59.753 +01:00 [INF] Executed endpoint '/Index'
+2022-11-23 12:04:59.755 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/ - - - 200 - text/html;+charset=utf-8 22.9293ms
+2022-11-23 12:04:59.787 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/_framework/aspnetcore-browser-refresh.js - -
+2022-11-23 12:04:59.789 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/_framework/aspnetcore-browser-refresh.js - - - 200 11953 application/javascript;+charset=utf-8 1.5438ms
+2022-11-23 12:05:02.240 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/Privacy - -
+2022-11-23 12:05:02.245 +01:00 [INF] Executing endpoint '/Privacy'
+2022-11-23 12:05:02.247 +01:00 [INF] Route matched with {page = "/Privacy"}. Executing page /Privacy
+2022-11-23 12:05:02.247 +01:00 [INF] Executing handler method RazorPageOidcClient.Pages.PrivacyModel.OnGet - ModelState is "Valid"
+2022-11-23 12:05:02.248 +01:00 [INF] Executed handler method OnGet, returned result .
+2022-11-23 12:05:02.248 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2022-11-23 12:05:02.248 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2022-11-23 12:05:02.256 +01:00 [INF] Executed page /Privacy in 8.8297ms
+2022-11-23 12:05:02.256 +01:00 [INF] Executed endpoint '/Privacy'
+2022-11-23 12:05:02.258 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/Privacy - - - 200 - text/html;+charset=utf-8 17.7889ms
+2022-11-23 12:05:02.282 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/_framework/aspnetcore-browser-refresh.js - -
+2022-11-23 12:05:02.285 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/_framework/aspnetcore-browser-refresh.js - - - 200 11953 application/javascript;+charset=utf-8 1.1154ms
+2022-11-23 12:22:46.110 +01:00 [INF] User profile is available. Using 'C:\Users\jeanbaptiste.castill\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-23 12:22:46.475 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-23 12:22:46.475 +01:00 [INF] Hosting environment: Development
+2022-11-23 12:22:46.476 +01:00 [INF] Content root path: C:\Repos\exercises-security-workshop\3-OpenIDConnect-OAuth2-flows\start\RazorPageOidcClient
+2022-11-23 12:22:46.520 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/ - -
+2022-11-23 12:22:46.617 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-11-23 12:22:46.634 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No authenticationScheme was specified, and there was no DefaultChallengeScheme found. The default schemes can be set using either AddAuthentication(string defaultScheme) or AddAuthentication(Action<AuthenticationOptions> configureOptions).
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-11-23 12:22:47.121 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/ - - - 500 - text/html;+charset=utf-8 605.6375ms
+2022-11-23 12:22:47.199 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/_framework/aspnetcore-browser-refresh.js - -
+2022-11-23 12:22:47.213 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/_framework/aspnetcore-browser-refresh.js - - - 200 11953 application/javascript;+charset=utf-8 14.3991ms
+2022-11-23 12:25:08.612 +01:00 [INF] User profile is available. Using 'C:\Users\jeanbaptiste.castill\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-23 12:25:08.973 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-23 12:25:08.974 +01:00 [INF] Hosting environment: Development
+2022-11-23 12:25:08.974 +01:00 [INF] Content root path: C:\Repos\exercises-security-workshop\3-OpenIDConnect-OAuth2-flows\start\RazorPageOidcClient
+2022-11-23 12:25:09.011 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/ - -
+2022-11-23 12:25:09.241 +01:00 [INF] Cookies was not authenticated. Failure message: Unprotect ticket failed
+2022-11-23 12:25:09.250 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-11-23 12:25:13.513 +01:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: IDX20803: Unable to obtain configuration from: 'https://localhost:44318/.well-known/openid-configuration'.
+ ---> System.IO.IOException: IDX20804: Unable to retrieve document from: 'https://localhost:44318/.well-known/openid-configuration'.
+ ---> System.Net.Http.HttpRequestException: No connection could be made because the target machine actively refused it. (localhost:44318)
+ ---> System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|277_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.AddHttp11ConnectionAsync(HttpRequestMessage request)
+   at System.Threading.Tasks.TaskCompletionSourceWithCancellation`1.WaitWithCancellationAsync(CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttp11ConnectionAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.<SendAsync>g__Core|83_0(HttpRequestMessage request, HttpCompletionOption completionOption, CancellationTokenSource cts, Boolean disposeCts, CancellationTokenSource pendingRequestsCts, CancellationToken originalCancellationToken)
+   at Microsoft.IdentityModel.Protocols.HttpDocumentRetriever.GetDocumentAsync(String address, CancellationToken cancel)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.Protocols.HttpDocumentRetriever.GetDocumentAsync(String address, CancellationToken cancel)
+   at Microsoft.IdentityModel.Protocols.OpenIdConnect.OpenIdConnectConfigurationRetriever.GetAsync(String address, IDocumentRetriever retriever, CancellationToken cancel)
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync(CancellationToken cancel)
+   --- End of inner exception stack trace ---
+   at Microsoft.IdentityModel.Protocols.ConfigurationManager`1.GetConfigurationAsync(CancellationToken cancel)
+   at Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler.HandleChallengeAsyncInternal(AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectHandler.HandleChallengeAsync(AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationHandler`1.ChallengeAsync(AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authentication.AuthenticationService.ChallengeAsync(HttpContext context, String scheme, AuthenticationProperties properties)
+   at Microsoft.AspNetCore.Authorization.Policy.AuthorizationMiddlewareResultHandler.HandleAsync(RequestDelegate next, HttpContext context, AuthorizationPolicy policy, PolicyAuthorizationResult authorizeResult)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-11-23 12:25:13.739 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/ - - - 500 - text/html;+charset=utf-8 4733.0469ms
+2022-11-23 12:25:13.792 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/_framework/aspnetcore-browser-refresh.js - -
+2022-11-23 12:25:13.808 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/_framework/aspnetcore-browser-refresh.js - - - 200 11953 application/javascript;+charset=utf-8 15.7956ms
+2022-11-23 12:25:55.443 +01:00 [INF] User profile is available. Using 'C:\Users\jeanbaptiste.castill\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-23 12:25:56.064 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-23 12:25:56.064 +01:00 [INF] Hosting environment: Development
+2022-11-23 12:25:56.064 +01:00 [INF] Content root path: C:\Repos\exercises-security-workshop\3-OpenIDConnect-OAuth2-flows\start\RazorPageOidcClient
+2022-11-23 12:25:56.129 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/ - -
+2022-11-23 12:25:56.521 +01:00 [INF] Cookies was not authenticated. Failure message: Unprotect ticket failed
+2022-11-23 12:25:56.536 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-11-23 12:26:02.823 +01:00 [INF] AuthenticationScheme: OpenIdConnect was challenged.
+2022-11-23 12:26:02.885 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/ - - - 302 - - 6763.4885ms
+2022-11-23 12:27:07.161 +01:00 [INF] User profile is available. Using 'C:\Users\jeanbaptiste.castill\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-23 12:27:07.557 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-11-23 12:27:07.557 +01:00 [INF] Hosting environment: Development
+2022-11-23 12:27:07.557 +01:00 [INF] Content root path: C:\Repos\exercises-security-workshop\3-OpenIDConnect-OAuth2-flows\start\RazorPageOidcClient
+2022-11-23 12:27:07.606 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/ - -
+2022-11-23 12:27:07.883 +01:00 [INF] Cookies was not authenticated. Failure message: Unprotect ticket failed
+2022-11-23 12:27:07.893 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-11-23 12:27:12.238 +01:00 [INF] AuthenticationScheme: OpenIdConnect was challenged.
+2022-11-23 12:27:12.281 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/ - - - 302 - - 4683.2180ms
+2022-11-23 12:27:35.210 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44360/signin-oidc application/x-www-form-urlencoded 445
+2022-11-23 12:27:36.227 +01:00 [INF] AuthenticationScheme: Cookies signed in.
+2022-11-23 12:27:36.237 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/ - -
+2022-11-23 12:27:36.237 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44360/signin-oidc application/x-www-form-urlencoded 445 - 302 - - 1026.8651ms
+2022-11-23 12:27:36.244 +01:00 [INF] Executing endpoint '/Index'
+2022-11-23 12:27:36.254 +01:00 [INF] Route matched with {page = "/Index"}. Executing page /Index
+2022-11-23 12:27:36.271 +01:00 [INF] Executing handler method RazorPageOidcClient.Pages.IndexModel.OnGet - ModelState is "Valid"
+2022-11-23 12:27:36.277 +01:00 [INF] Executed handler method OnGet, returned result .
+2022-11-23 12:27:36.282 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2022-11-23 12:27:36.282 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2022-11-23 12:27:36.472 +01:00 [INF] Executed page /Index in 209.4443ms
+2022-11-23 12:27:36.474 +01:00 [INF] Executed endpoint '/Index'
+2022-11-23 12:27:36.506 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/ - - - 200 - text/html;+charset=utf-8 268.8314ms
+2022-11-23 12:27:36.540 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/_framework/aspnetcore-browser-refresh.js - -
+2022-11-23 12:27:36.549 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/_framework/aspnetcore-browser-refresh.js - - - 200 11953 application/javascript;+charset=utf-8 9.0193ms
+2022-11-23 12:29:00.198 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/Logout - -
+2022-11-23 12:29:00.202 +01:00 [INF] Executing endpoint '/Logout'
+2022-11-23 12:29:00.205 +01:00 [INF] Route matched with {page = "/Logout"}. Executing page /Logout
+2022-11-23 12:29:00.206 +01:00 [INF] Executing handler method RazorPageOidcClient.Pages.LogoutModel.OnGetAsync - ModelState is "Valid"
+2022-11-23 12:29:00.206 +01:00 [INF] Executed handler method OnGetAsync, returned result Microsoft.AspNetCore.Mvc.SignOutResult.
+2022-11-23 12:29:00.220 +01:00 [INF] Executing SignOutResult with authentication schemes (["Cookies","OpenIdConnect"]).
+2022-11-23 12:29:00.227 +01:00 [INF] AuthenticationScheme: Cookies signed out.
+2022-11-23 12:29:00.239 +01:00 [INF] AuthenticationScheme: OpenIdConnect signed out.
+2022-11-23 12:29:00.239 +01:00 [INF] Executed page /Logout in 33.7723ms
+2022-11-23 12:29:00.239 +01:00 [INF] Executed endpoint '/Logout'
+2022-11-23 12:29:00.240 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/Logout - - - 302 - - 41.2135ms
+2022-11-23 12:29:05.732 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/signout-callback-oidc?state=CfDJ8FCl9LdozMBJiV4cQJICZ8H5SOjZRRSnENW6YnOFf4Mzth8gi1-9rZS7EKZZXl1sJovMt2pei-7vDoMf-S6-zqezNfswj-0F_pzhbTbBPYiTtNqmhW7uf2iuuw2yEnR8S6bgucDC5bZmaVW82iW5UYM - -
+2022-11-23 12:29:05.748 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/signout-callback-oidc?state=CfDJ8FCl9LdozMBJiV4cQJICZ8H5SOjZRRSnENW6YnOFf4Mzth8gi1-9rZS7EKZZXl1sJovMt2pei-7vDoMf-S6-zqezNfswj-0F_pzhbTbBPYiTtNqmhW7uf2iuuw2yEnR8S6bgucDC5bZmaVW82iW5UYM - - - 302 - - 15.7722ms
+2022-11-23 12:29:05.752 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/SignedOut - -
+2022-11-23 12:29:05.753 +01:00 [INF] Executing endpoint '/SignedOut'
+2022-11-23 12:29:05.756 +01:00 [INF] Route matched with {page = "/SignedOut"}. Executing page /SignedOut
+2022-11-23 12:29:05.756 +01:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2022-11-23 12:29:05.756 +01:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2022-11-23 12:29:05.757 +01:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+2022-11-23 12:29:05.758 +01:00 [INF] AuthenticationScheme: OpenIdConnect was challenged.
+2022-11-23 12:29:05.758 +01:00 [INF] Executed page /SignedOut in 2.2228ms
+2022-11-23 12:29:05.758 +01:00 [INF] Executed endpoint '/SignedOut'
+2022-11-23 12:29:05.758 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/SignedOut - - - 302 - - 6.5098ms
+2022-11-23 12:30:09.402 +01:00 [INF] Request starting HTTP/2 POST https://localhost:44360/signin-oidc application/x-www-form-urlencoded 445
+2022-11-23 12:30:09.568 +01:00 [INF] AuthenticationScheme: Cookies signed in.
+2022-11-23 12:30:09.568 +01:00 [INF] Request finished HTTP/2 POST https://localhost:44360/signin-oidc application/x-www-form-urlencoded 445 - 302 - - 166.3218ms
+2022-11-23 12:30:09.574 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/SignedOut - -
+2022-11-23 12:30:09.575 +01:00 [INF] Executing endpoint '/SignedOut'
+2022-11-23 12:30:09.576 +01:00 [INF] Route matched with {page = "/SignedOut"}. Executing page /SignedOut
+2022-11-23 12:30:09.576 +01:00 [INF] Executing handler method RazorPageOidcClient.Pages.SignedOutModel.OnGet - ModelState is "Valid"
+2022-11-23 12:30:09.577 +01:00 [INF] Executed handler method OnGet, returned result .
+2022-11-23 12:30:09.577 +01:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2022-11-23 12:30:09.577 +01:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2022-11-23 12:30:09.590 +01:00 [INF] Executed page /SignedOut in 14.6436ms
+2022-11-23 12:30:09.590 +01:00 [INF] Executed endpoint '/SignedOut'
+2022-11-23 12:30:09.592 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/SignedOut - - - 200 - text/html;+charset=utf-8 17.4534ms
+2022-11-23 12:30:09.626 +01:00 [INF] Request starting HTTP/2 GET https://localhost:44360/_framework/aspnetcore-browser-refresh.js - -
+2022-11-23 12:30:09.630 +01:00 [INF] Request finished HTTP/2 GET https://localhost:44360/_framework/aspnetcore-browser-refresh.js - - - 200 11953 application/javascript;+charset=utf-8 3.7025ms

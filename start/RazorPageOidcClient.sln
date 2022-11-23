@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RazorPageOidcClient", "RazorPageOidcClient\RazorPageOidcClient.csproj", "{2B2E3320-56D6-4F1F-8D39-2F3C2E9A2CB7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6E8E43CF-A460-4E21-9EBA-2BA57A20FF1F}"
+	ProjectSection(SolutionItems) = preProject
+		..\exercise.MD = ..\exercise.MD
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityProvider", "IdentityProvider\IdentityProvider.csproj", "{496AF9F8-FF84-42B7-8859-AD137CEEDC42}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B2E3320-56D6-4F1F-8D39-2F3C2E9A2CB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B2E3320-56D6-4F1F-8D39-2F3C2E9A2CB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B2E3320-56D6-4F1F-8D39-2F3C2E9A2CB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B2E3320-56D6-4F1F-8D39-2F3C2E9A2CB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{496AF9F8-FF84-42B7-8859-AD137CEEDC42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{496AF9F8-FF84-42B7-8859-AD137CEEDC42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{496AF9F8-FF84-42B7-8859-AD137CEEDC42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{496AF9F8-FF84-42B7-8859-AD137CEEDC42}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {407B3490-E126-48D6-A91F-129781E49FEF}
+	EndGlobalSection
+EndGlobal
